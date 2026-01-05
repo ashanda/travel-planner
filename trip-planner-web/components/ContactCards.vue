@@ -24,5 +24,8 @@
 
 <script setup lang="ts">
 type Card = { title: string; subtitle: string; body: string; icon: string; link?: string; linkText?: string }
-defineProps<{ cards: Card[] }>()
+
+const props = withDefaults(defineProps<{ cards?: Card[] }>(), {
+  cards: () => []
+})
 </script>
