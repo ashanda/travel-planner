@@ -16,21 +16,10 @@ type AIService struct {
 }
 
 func NewAIService(apiKey, model string) *AIService {
-	return &AIService{apiKey: apiKey, model: model}
-}
-
-type responsesReq struct {
-	Model string `json:"model"`
-	Input string `json:"input"`
-}
-
-type responsesResp struct {
-	Output []struct {
-		Content []struct {
-			Type string `json:"type"`
-			Text string `json:"text"`
-		} `json:"content"`
-	} `json:"output"`
+	return &AIService{
+		apiKey: apiKey,
+		model:  model,
+	}
 }
 
 func (s *AIService) GenerateTrip(
@@ -42,13 +31,16 @@ func (s *AIService) GenerateTrip(
 
 	prompt := buildPrompt(req, places, weather)
 
+	// ✅ CORRECT Responses API payload (2025 schema)
 	payload := map[string]any{
-		"model": s.model, // gpt-5.2
+		"model": s.model, // e.g. gpt-5.2
 		"input": prompt,
 
-		// HARD JSON enforcement (important)
-		"response_format": map[string]any{
-			"type": "json_object",
+		// ✅ JSON enforcement (THIS IS THE RIGHT WAY)
+		"text": map[string]any{
+			"format": map[string]any{
+				"type": "json_object",
+			},
 		},
 	}
 
@@ -79,7 +71,7 @@ func (s *AIService) GenerateTrip(
 		return nil, err
 	}
 
-	// 🔒 Extract ALL text safely
+	// ✅ Collect ALL text parts
 	var text string
 	for _, out := range raw.Output {
 		for _, c := range out.Content {
@@ -93,7 +85,7 @@ func (s *AIService) GenerateTrip(
 		return nil, fmt.Errorf("AI returned empty output")
 	}
 
-	// 🔒 Parse JSON
+	// ✅ Parse guaranteed JSON
 	var obj map[string]any
 	if err := json.Unmarshal([]byte(text), &obj); err != nil {
 		return nil, fmt.Errorf("AI returned invalid JSON: %w\nRAW:\n%s", err, text)
@@ -122,9 +114,18 @@ JSON structure:
       "base_city":"string",
       "theme":"string",
       "items":[
-        {"time_block":"08:00-10:30","title":"...","description":"...","location":"...","travel_mode":"car","travel_mins":30}
+        {
+          "time_block":"08:00-10:30",
+          "title":"...",
+          "description":"...",
+          "location":"...",
+          "travel_mode":"car",
+          "travel_mins":30
+        }
       ],
-      "meals":[{"meal_type":"breakfast","suggestion":"...","area":"..."}],
+      "meals":[
+        {"meal_type":"breakfast","suggestion":"...","area":"..."}
+      ],
       "hotel_area":"string",
       "cost_range":{"currency":"LKR","low":0,"mid":0,"high":0,"notes":"..."}
     }
@@ -132,8 +133,8 @@ JSON structure:
 }
 
 Rules:
-- Realistic Sri Lanka travel times. Avoid impossible jumps.
-- Prefer sensible routes (Colombo->Kandy->Ella->Yala->Mirissa etc depending on days).
+- Realistic Sri Lanka travel times.
+- Prefer sensible routes (Colombo → Kandy → Ella → Yala → Mirissa).
 - Family-safe and practical.
 - Currency must be LKR.
 - Use places context to pick REAL attractions.

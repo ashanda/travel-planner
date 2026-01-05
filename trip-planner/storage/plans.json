@@ -2102,5 +2102,417 @@
     },
     "created_at": 1767594428,
     "updated_at": 1767594428
+  },
+  {
+    "id": "8d23b3a7-67f3-4760-8c6e-fac984547f35",
+    "input_hash": "611164b4fd01fdd8e3feea0db2e43879706a7631abd8303d42ac88729370b645",
+    "request": {
+      "destination": "Ella",
+      "start_date": "",
+      "days": 3,
+      "budget": "mid",
+      "interests": [],
+      "pace": "balanced",
+      "notes": ""
+    },
+    "itinerary": {
+      "days": [
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 45000,
+            "low": 14000,
+            "mid": 26000,
+            "notes": "Includes lodging + meals + local tuk-tuks + small fees. Mid assumes a comfortable guesthouse/hotel and multiple tuk-tuk rides."
+          },
+          "date": "",
+          "day_number": 1,
+          "hotel_area": "Ella town (walkable to restaurants; easy tuk-tuk access to trailheads)",
+          "items": [
+            {
+              "description": "Family-friendly hike to the iconic viewpoint. Go early for the best chance of clear views. Take it slow on muddy sections if it has rained.",
+              "location": "Little Adam's Peak Trailhead, Ella",
+              "time_block": "08:00-10:30",
+              "title": "Little Adam's Peak (sunrise-friendly hike)",
+              "travel_mins": 10,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Quick photo stop at a nearby viewpoint around the Little Adam’s Peak area; good option if clouds open briefly.",
+              "location": "Little adam's peak View Point, Ella",
+              "time_block": "10:45-12:00",
+              "title": "Viewpoint stop (near Little Adam's Peak)",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Light waterfall visit close to Ella. Enjoy the scenery and photos; avoid slippery rocks near the base.",
+              "location": "Kital Ella Waterfall, Ella",
+              "time_block": "14:00-16:00",
+              "title": "Waterfall visit (short, relaxing)",
+              "travel_mins": 15,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Wind down with a slow walk through Ella town, souvenir shops and cafes. Great for families and an easy pace day.",
+              "location": "Ella town center",
+              "time_block": "16:30-18:00",
+              "title": "Evening stroll in Ella town",
+              "travel_mins": 5,
+              "travel_mode": "walk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella town",
+              "meal_type": "breakfast",
+              "suggestion": "Hotel breakfast or a simple egg hopper/string hoppers set"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry (ask for mild options for kids) or kottu"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "dinner",
+              "suggestion": "Sri Lankan rice \u0026 curry or grilled chicken/veg at a family-friendly cafe"
+            }
+          ],
+          "theme": "Easy viewpoints + short hike"
+        },
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 52000,
+            "low": 15000,
+            "mid": 29000,
+            "notes": "Mid includes extra tuk-tuk time for cave/waterfall and optional local guide for Ella Rock (price varies)."
+          },
+          "date": "",
+          "day_number": 2,
+          "hotel_area": "Ella town (easy return after hiking; good dining options)",
+          "items": [
+            {
+              "description": "More challenging hike than Little Adam’s Peak with uneven paths and possible navigation confusion. Start early; carry water and snacks. Turn back if weather closes in.",
+              "location": "Ella Rock Trailhead, Ella",
+              "time_block": "06:30-11:30",
+              "title": "Ella Rock hike (start early; consider a local guide)",
+              "travel_mins": 10,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Return to your hotel to rest, shower, and dry off after the hike (useful in cool, humid weather).",
+              "location": "Ella (hotel)",
+              "time_block": "12:30-13:30",
+              "title": "Rest and refresh",
+              "travel_mins": 10,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Visit the cave associated with local legends. There are steps and uneven ground; keep kids close and use phone lights carefully.",
+              "location": "Ravana's Cave, Ella",
+              "time_block": "15:30-17:00",
+              "title": "Ravana’s Cave (steps + short exploration)",
+              "travel_mins": 20,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Quick look at a smaller nearby waterfall on the way back; skip if rain is heavy or rocks are too slick.",
+              "location": "Small rawana waterfall, Ella",
+              "time_block": "17:15-18:00",
+              "title": "Short waterfall stop (if energy allows)",
+              "travel_mins": 10,
+              "travel_mode": "tuk_tuk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella town / hotel",
+              "meal_type": "breakfast",
+              "suggestion": "Early breakfast + packed snack (banana, buns) for the hike"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "lunch",
+              "suggestion": "Hearty rice \u0026 curry or noodles; choose mild spice level"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "dinner",
+              "suggestion": "Soup/noodles or a lighter meal after hiking"
+            }
+          ],
+          "theme": "Adventure hike day (optional guide) + cave"
+        },
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 53000,
+            "low": 16000,
+            "mid": 30000,
+            "notes": "Lower day cost if you keep it mostly in town; higher if you add extra tuk-tuk rides and a more upscale dinner."
+          },
+          "date": "",
+          "day_number": 3,
+          "hotel_area": "Ella town (central, practical for a flexible last day)",
+          "items": [
+            {
+              "description": "Morning waterfall visit with minimal walking. Best for a relaxed final day; be cautious near wet rocks.",
+              "location": "Kuda Ravana Ella waterfall, Ella",
+              "time_block": "08:30-10:00",
+              "title": "Kuda Ravana Ella waterfall",
+              "travel_mins": 20,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Pick a quick viewpoint stop for photos; ideal if clouds lift mid-morning.",
+              "location": "Viewpoint Elma, Ella",
+              "time_block": "10:30-12:00",
+              "title": "Scenic viewpoint stop",
+              "travel_mins": 15,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Unstructured time for cafes, souvenirs, and relaxing. If it’s raining, keep activities close to town.",
+              "location": "Ella town center",
+              "time_block": "14:30-16:30",
+              "title": "Free time: cafe hopping + shopping",
+              "travel_mins": 5,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "If you’re continuing to Yala/Mirissa later, use a reputable local operator to arrange a safe car/van transfer and confirm start times.",
+              "location": "Ella (local operator pickup)",
+              "time_block": "16:45-18:00",
+              "title": "Optional: book a trusted tuk-tuk for onward planning",
+              "travel_mins": 5,
+              "travel_mode": "walk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella town / hotel",
+              "meal_type": "breakfast",
+              "suggestion": "Milk rice or roti with dhal + tea"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "lunch",
+              "suggestion": "Cafe lunch (sandwiches/pasta) or Sri Lankan short eats"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "dinner",
+              "suggestion": "Early dinner if traveling onward; choose a place near your hotel to avoid rain later"
+            }
+          ],
+          "theme": "Waterfalls + relaxed viewpoints (weather-flexible)"
+        }
+      ],
+      "route": [
+        "Ella"
+      ],
+      "summary": "3-day balanced, family-safe itinerary based in Ella focusing on easy hikes, viewpoints, and waterfalls. Weather is cool and cloudy (~17°C) with high humidity—expect mist and occasional showers.",
+      "tips": [
+        "Start hikes early (before 08:00) for clearer views and cooler temperatures.",
+        "Carry a light rain jacket/poncho and a small towel; trails can be muddy and slippery in cloudy, humid conditions.",
+        "Use tuk-tuks for short hops (Ella town ↔ trailheads/viewpoints); confirm price before you ride or ask your hotel to arrange.",
+        "Wear shoes with grip for steps at Ravana’s Cave and wet rocks near waterfalls.",
+        "Keep some cash for parking/entry-style fees and small shops; card acceptance can be limited outside town.",
+        "If traveling with kids, prefer Little Adam’s Peak over Ella Rock (shorter, safer, fewer navigation issues)."
+      ],
+      "total_budget": {
+        "currency": "LKR",
+        "high": 150000,
+        "low": 45000,
+        "mid": 85000,
+        "notes": "Estimates for 2 adults for 3 days excluding long-distance transfers to/from Ella. Includes local tuk-tuk rides, entrance/parking fees, meals, and mid-range lodging. Costs vary by hotel standard and how many paid tours you add."
+      },
+      "warnings": [
+        "Waterfall rocks and edges are slippery; avoid climbing on wet boulders and keep children close.",
+        "Ella Rock route can be confusing; consider going with a local guide or start from the official trailhead and use offline maps.",
+        "Leeches can appear after rain on forest trails—carry leech socks or repellent and check ankles.",
+        "Fog can reduce visibility at viewpoints; have a flexible plan to swap activities between days."
+      ]
+    },
+    "weather": {
+      "condition": "Clouds",
+      "enabled": true,
+      "feels_like_c": 17.52,
+      "humidity": 95,
+      "temp_c": 17.26,
+      "wind_mps": 2.62
+    },
+    "places": {
+      "status": "OK",
+      "top_places": [
+        {
+          "address": "V28V+FRM, A23, Ella, Sri Lanka",
+          "lat": 6.8662092,
+          "lng": 81.0445561,
+          "name": "Kuda Ravana Ella waterfall",
+          "place_id": "ChIJk6Socrtl5DoR4NnxYbPPr6c",
+          "rating": 4.3,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V25V+4JJ, Unnamed Road, Ella, Sri Lanka",
+          "lat": 6.857849099999999,
+          "lng": 81.04402259999999,
+          "name": "Ella Rock Trailhead",
+          "place_id": "ChIJnWx4AZhl5DoRrzo0tVTuyJw",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Ella, Sri Lanka",
+          "lat": 6.8640932,
+          "lng": 81.06472289999999,
+          "name": "Little adam's peak View Point",
+          "place_id": "ChIJS8581XRl5DoRPo5uWkR9zXQ",
+          "rating": 4.7,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V28W+MJF, Ella, Sri Lanka",
+          "lat": 6.8666988,
+          "lng": 81.046553,
+          "name": "Kital Ella Waterfall",
+          "place_id": "ChIJn33gk7xl5DoR6jgM0a9p6dw",
+          "rating": 4.2,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Oya arawa, Kithalella, Ella 90090, Sri Lanka",
+          "lat": 6.862608499999999,
+          "lng": 81.04411379999999,
+          "name": "Small rawana waterfall",
+          "place_id": "ChIJo_Ebe1tl5DoRiqw5w3rdOaM",
+          "rating": 4.3,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V27X+QFR, Ella, Sri Lanka",
+          "lat": 6.8644786,
+          "lng": 81.04864169999999,
+          "name": "Ravana's Cave",
+          "place_id": "ChIJRd0BrLZl5DoRJDhdFoCX3gw",
+          "rating": 4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Ella, Sri Lanka",
+          "lat": 6.869211699999999,
+          "lng": 81.0602456,
+          "name": "Little Adam's Peak Trailhead",
+          "place_id": "ChIJTyaDze9l5DoRO1_CRIrSq1U",
+          "rating": 4.7,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Vemullahena, Ella 90090, Sri Lanka",
+          "lat": 6.8737128,
+          "lng": 81.04617669999999,
+          "name": "Ella Tuk Tuk \u0026 Taxi Tours With Dilshan",
+          "place_id": "ChIJEUSKE1Zl5DoRfhNy_1_tKL8",
+          "rating": 5,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "travel_agency",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V322+7W, Ella, Sri Lanka",
+          "lat": 6.850713499999999,
+          "lng": 81.0523398,
+          "name": "Ella Rock Viewpoint - 02",
+          "place_id": "ChIJkxpvJf9l5DoRA2fUN7KckRM",
+          "rating": 4.6,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V28X+3Q, Ella, Sri Lanka",
+          "lat": 6.8652165,
+          "lng": 81.0494547,
+          "name": "Little's Adams Peak View Point",
+          "place_id": "ChIJhwMb3yhl5DoRumwZOkxjWvA",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Nine Arch Rd, Ella 90122, Sri Lanka",
+          "lat": 6.8892437,
+          "lng": 81.0532379,
+          "name": "Ella Pearl Mountain",
+          "place_id": "ChIJQROLixZl5DoRRUSiEtYRXkM",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V29V+8M5, Waterfall Rd, Ella, Sri Lanka",
+          "lat": 6.868264,
+          "lng": 81.0442288,
+          "name": "Viewpoint Elma",
+          "place_id": "ChIJW8tWPwBl5DoRfhM1DcBQBtg",
+          "rating": 5,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    "created_at": 1767615827,
+    "updated_at": 1767615827
   }
 ]
