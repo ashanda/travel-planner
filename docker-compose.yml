@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   api:
     build:
@@ -5,13 +7,10 @@ services:
     container_name: trip-planner-api
     environment:
       APP_PORT: "8080"
-
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       OPENAI_MODEL: ${OPENAI_MODEL}
-
       GOOGLE_MAPS_API_KEY: ${GOOGLE_MAPS_API_KEY}
       OPENWEATHER_API_KEY: ${OPENWEATHER_API_KEY}
-
       PLANS_FILE: ${PLANS_FILE}
       PLACES_CACHE_HOURS: ${PLACES_CACHE_HOURS}
       WEATHER_CACHE_HOURS: ${WEATHER_CACHE_HOURS}
@@ -43,9 +42,10 @@ services:
     depends_on:
       - web
       - api
+
   certbot:
-  image: certbot/certbot:latest
-  container_name: trip-certbot
-  volumes:
-    - ./certbot/www:/var/www/certbot
-    - ./certbot/conf:/etc/letsencrypt
+    image: certbot/certbot:latest
+    container_name: trip-certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
