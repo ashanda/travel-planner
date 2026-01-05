@@ -83,9 +83,15 @@
           />
 
           <SectionCard title="Itinerary" subtitle="Day-by-day plan">
-            <ItineraryView v-if="store.plan?.itinerary" :itinerary="store.plan.itinerary" />
+            <ItinerarySkeleton v-if="store.loading" />
+
+            <ItineraryView
+            v-else-if="store.plan?.itinerary"
+            :itinerary="store.plan.itinerary"
+            />
+
             <div v-else class="text-sm text-slate-600">
-              Create a plan to see itinerary here.
+            Create a plan to see itinerary here.
             </div>
           </SectionCard>
         </div>
@@ -190,6 +196,7 @@ import PlanSummaryCard from '@/components/PlanSummaryCard.vue'
 import ItineraryView from '@/components/ItineraryView.vue'
 import LoadPlanById from '@/components/LoadPlanById.vue'
 import WeatherCard from '@/components/WeatherCard.vue'
+import ItinerarySkeleton from '@/components/ItinerarySkeleton.vue'
 
 import FeaturePills from '@/components/FeaturePills.vue'
 import GlassCard from '@/components/GlassCard.vue'
