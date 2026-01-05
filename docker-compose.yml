@@ -39,12 +39,13 @@ services:
       - "${NGINX_PORT}:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+       - ./certbot/www:/var/www/certbot
     depends_on:
       - web
       - api
   certbot:
-    image: certbot/certbot:latest
-    container_name: trip-certbot
-    volumes:
-      - ./certbot/www:/var/www/certbot
-      - ./certbot/conf:/etc/letsencrypt
+  image: certbot/certbot:latest
+  container_name: trip-certbot
+  volumes:
+    - ./certbot/www:/var/www/certbot
+    - ./certbot/conf:/etc/letsencrypt
