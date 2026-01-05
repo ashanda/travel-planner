@@ -1,0 +1,44 @@
+services:
+  api:
+    build:
+      context: ./trip-planner
+    container_name: trip-planner-api
+    environment:
+      APP_PORT: "8080"
+
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL}
+
+      GOOGLE_MAPS_API_KEY: ${GOOGLE_MAPS_API_KEY}
+      OPENWEATHER_API_KEY: ${OPENWEATHER_API_KEY}
+
+      PLANS_FILE: ${PLANS_FILE}
+      PLACES_CACHE_HOURS: ${PLACES_CACHE_HOURS}
+      WEATHER_CACHE_HOURS: ${WEATHER_CACHE_HOURS}
+    volumes:
+      - ./trip-planner/storage:/app/storage
+    expose:
+      - "8080"
+
+  web:
+    build:
+      context: ./trip-planner-web
+    container_name: trip-planner-web
+    environment:
+      NODE_ENV: "production"
+      NUXT_PUBLIC_API_BASE: ${NUXT_PUBLIC_API_BASE}
+    expose:
+      - "3000"
+    depends_on:
+      - api
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: trip-planner-nginx
+    ports:
+      - "${NGINX_PORT}:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web
+      - api

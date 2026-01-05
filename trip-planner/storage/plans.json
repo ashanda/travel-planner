@@ -1,0 +1,2106 @@
+[
+  {
+    "id": "07a36612-8604-437f-9215-6e4d1cd9cd79",
+    "input_hash": "fb97e0328eba506bcb32481ebb200c87134c7a7feac3bc296720e29b5f0d39bf",
+    "request": {
+      "destination": "ella",
+      "start_date": "2026-01-05",
+      "days": 3,
+      "budget": "low",
+      "interests": [
+        "nature",
+        "food"
+      ],
+      "pace": "balanced",
+      "notes": ""
+    },
+    "itinerary": {
+      "days": [
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 26000,
+            "low": 7500,
+            "mid": 14000,
+            "notes": "Low: simple guesthouse + local meals + 1–2 tuk-tuks. Mid/high add cafés, more transfers, and better lodging."
+          },
+          "date": "2026-01-05",
+          "day_number": 1,
+          "hotel_area": "Ella Town (walkable to restaurants; easy tuk-tuk access to trailheads)",
+          "items": [
+            {
+              "description": "Easy-to-moderate hike with big views over tea hills. Go early for cooler temps and better visibility in cloudy weather.",
+              "location": "Little Adam's Peak Trailhead, Ella",
+              "time_block": "08:00-10:30",
+              "title": "Little Adam’s Peak morning hike",
+              "travel_mins": 20,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Spend extra time at the viewpoints for panoramas; keep pace comfortable and take breaks.",
+              "location": "Little adam's peak View Point / Little's Adams Peak View Point, Ella",
+              "time_block": "10:45-12:00",
+              "title": "Photo stop at Little Adam’s Peak viewpoints",
+              "travel_mins": 15,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Relaxing nature stop; enjoy the sound of the falls and forested surroundings. Avoid slippery rocks near the water.",
+              "location": "Kital Ella Waterfall, Ella",
+              "time_block": "14:00-16:30",
+              "title": "Kital Ella Waterfall short visit",
+              "travel_mins": 15,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Try kottu, hoppers, roti, fresh juices, and Sri Lankan rice \u0026 curry at small local spots around town.",
+              "location": "Ella Town (main street area)",
+              "time_block": "17:30-19:00",
+              "title": "Ella town food walk (budget-friendly)",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella Town",
+              "meal_type": "breakfast",
+              "suggestion": "Egg hoppers or string hoppers with dhal + tea"
+            },
+            {
+              "area": "Ella Town",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry (vegetable-heavy for a light post-hike meal)"
+            },
+            {
+              "area": "Ella Town",
+              "meal_type": "dinner",
+              "suggestion": "Kottu roti or fried rice + fresh juice/king coconut"
+            }
+          ],
+          "theme": "Ella town + classic viewpoints (easy nature day)"
+        },
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 27000,
+            "low": 8000,
+            "mid": 14500,
+            "notes": "Includes multiple short tuk-tuk/car transfers to Ravana area + meals. Entrance/parking fees, if any, are minor but vary."
+          },
+          "date": "2026-01-06",
+          "day_number": 2,
+          "hotel_area": "Ella Town (or Kithalella for slightly quieter stays)",
+          "items": [
+            {
+              "description": "Scenic waterfall stop with short walking around the base areas. Keep a safe distance from wet rocks.",
+              "location": "Kuda Ravana Ella waterfall, Ella (A23)",
+              "time_block": "08:00-10:00",
+              "title": "Kuda Ravana Ella waterfall",
+              "travel_mins": 20,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Short cave visit with steps; take it slow and use phone light if needed. Not ideal for very small kids if slippery.",
+              "location": "Ravana's Cave, Ella",
+              "time_block": "10:15-12:00",
+              "title": "Ravana’s Cave visit",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "A smaller, calmer waterfall stop for photos and a short break before returning to town.",
+              "location": "Small rawana waterfall, Kithalella/Ella",
+              "time_block": "14:00-15:30",
+              "title": "Small Rawana waterfall quick stop",
+              "travel_mins": 20,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Warm up with milk tea/ginger tea and short eats; if skies clear, catch a viewpoint near town.",
+              "location": "Ella Town",
+              "time_block": "16:30-18:00",
+              "title": "Tea + snack break and sunset viewpoint time",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella Town",
+              "meal_type": "breakfast",
+              "suggestion": "Roti with coconut sambol + tea"
+            },
+            {
+              "area": "Ella / A23 roadside eateries",
+              "meal_type": "lunch",
+              "suggestion": "Budget set meal (rice \u0026 curry) before heading back from the Ravana area"
+            },
+            {
+              "area": "Ella Town",
+              "meal_type": "dinner",
+              "suggestion": "Devilled chicken/veg (or tofu) with rice; finish with curd \u0026 treacle if available"
+            }
+          ],
+          "theme": "Waterfalls + cave (nature exploration)"
+        },
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 22000,
+            "low": 8500,
+            "mid": 13500,
+            "notes": "Low assumes mostly walking for Ella Rock and minimal paid activities; costs increase with more tuk-tuks and café stops."
+          },
+          "date": "2026-01-07",
+          "day_number": 3,
+          "hotel_area": "Ella Town (easy access for early start and evening meals)",
+          "items": [
+            {
+              "description": "Classic Ella hike with forest and ridge views. Start early for cooler temps and better visibility; bring water and snacks.",
+              "location": "Ella Rock Trailhead, Ella",
+              "time_block": "06:30-11:30",
+              "title": "Ella Rock hike (early start)",
+              "travel_mins": 20,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Refuel after the hike with a filling local meal and fresh juice.",
+              "location": "Ella Town",
+              "time_block": "12:30-14:00",
+              "title": "Recovery lunch in town",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "If energy allows, do a short tuk-tuk ride to a nearby viewpoint for late-afternoon light; keep it low-effort after the hike.",
+              "location": "Ella Rock Viewpoint - 02 (area) / nearby viewpoints around Ella",
+              "time_block": "15:30-17:00",
+              "title": "Optional viewpoint stop (short and easy)",
+              "travel_mins": 15,
+              "travel_mode": "tuk_tuk"
+            },
+            {
+              "description": "Try short eats (vadai, rolls), then a simple dessert (fruit plate or curd \u0026 treacle).",
+              "location": "Ella Town (main street area)",
+              "time_block": "18:00-19:30",
+              "title": "Final night food: street-style snacks + dessert",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella Town",
+              "meal_type": "breakfast",
+              "suggestion": "Takeaway buns/short eats + banana before the hike"
+            },
+            {
+              "area": "Ella Town",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry or noodles with a fresh lime soda"
+            },
+            {
+              "area": "Ella Town",
+              "meal_type": "dinner",
+              "suggestion": "Mixed grill/veg curry (budget option) + curd \u0026 treacle"
+            }
+          ],
+          "theme": "Hike day (Ella Rock) + relaxed local food"
+        }
+      ],
+      "route": [
+        "Ella"
+      ],
+      "summary": "3-day low-budget, family-safe nature-and-food trip based in Ella. Mix of short hikes (Little Adam’s Peak), classic viewpoints (Nine Arch area), waterfalls (Kuda Ravana/Kital Ella), and local cafés. Weather looks cool and cloudy (~18–19°C), good for walking with a light jacket.",
+      "tips": [
+        "Start hikes early (before 08:00) to avoid crowds and to get clearer views before clouds build.",
+        "Carry a light rain jacket and a warm layer; evenings can feel chilly around Ella.",
+        "Use tuk-tuks for short transfers (town ↔ trailheads/waterfalls) to save time and energy; agree on price before starting.",
+        "For Nine Arch Bridge views, aim for early morning; ask your hotel about train times for a better chance to see one pass.",
+        "Drink bottled/filtered water and carry snacks for hikes (bananas, king coconut, short eats)."
+      ],
+      "total_budget": {
+        "currency": "LKR",
+        "high": 75000,
+        "low": 24000,
+        "mid": 42000,
+        "notes": "Estimates per person for 3 days in Ella (excluding long-distance transport to/from Ella). Low budget assumes guesthouse dorm/basic room share, mostly local meals, walking + occasional tuk-tuk. Mid/high include more tuk-tuks, paid viewpoints/swings, and nicer cafés."
+      },
+      "warnings": [
+        "Hiking trails can be slippery after rain; wear shoes with grip and avoid cliff edges.",
+        "At popular photo spots (swings/view decks), confirm all fees before paying and keep valuables secured.",
+        "Waterfall rocks are slippery and currents can be dangerous; keep children close and avoid wading in fast water."
+      ]
+    },
+    "weather": {
+      "condition": "Clouds",
+      "enabled": true,
+      "feels_like_c": 18.62,
+      "humidity": 84,
+      "temp_c": 18.52,
+      "wind_mps": 2.63
+    },
+    "places": {
+      "status": "OK",
+      "top_places": [
+        {
+          "address": "V28V+FRM, A23, Ella, Sri Lanka",
+          "lat": 6.8662092,
+          "lng": 81.0445561,
+          "name": "Kuda Ravana Ella waterfall",
+          "place_id": "ChIJk6Socrtl5DoR4NnxYbPPr6c",
+          "rating": 4.3,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V27X+QFR, Ella, Sri Lanka",
+          "lat": 6.8644786,
+          "lng": 81.04864169999999,
+          "name": "Ravana's Cave",
+          "place_id": "ChIJRd0BrLZl5DoRJDhdFoCX3gw",
+          "rating": 4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V25V+4JJ, Unnamed Road, Ella, Sri Lanka",
+          "lat": 6.857849099999999,
+          "lng": 81.04402259999999,
+          "name": "Ella Rock Trailhead",
+          "place_id": "ChIJnWx4AZhl5DoRrzo0tVTuyJw",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Ella, Sri Lanka",
+          "lat": 6.8640932,
+          "lng": 81.06472289999999,
+          "name": "Little adam's peak View Point",
+          "place_id": "ChIJS8581XRl5DoRPo5uWkR9zXQ",
+          "rating": 4.7,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V28W+MJF, Ella, Sri Lanka",
+          "lat": 6.8666988,
+          "lng": 81.046553,
+          "name": "Kital Ella Waterfall",
+          "place_id": "ChIJn33gk7xl5DoR6jgM0a9p6dw",
+          "rating": 4.2,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Oya arawa, Kithalella, Ella 90090, Sri Lanka",
+          "lat": 6.862608499999999,
+          "lng": 81.04411379999999,
+          "name": "Small rawana waterfall",
+          "place_id": "ChIJo_Ebe1tl5DoRiqw5w3rdOaM",
+          "rating": 4.3,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Ella, Sri Lanka",
+          "lat": 6.869211699999999,
+          "lng": 81.0602456,
+          "name": "Little Adam's Peak Trailhead",
+          "place_id": "ChIJTyaDze9l5DoRO1_CRIrSq1U",
+          "rating": 4.7,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Vemullahena, Ella 90090, Sri Lanka",
+          "lat": 6.8737128,
+          "lng": 81.04617669999999,
+          "name": "Ella Tuk Tuk \u0026 Taxi Tours With Dilshan",
+          "place_id": "ChIJEUSKE1Zl5DoRfhNy_1_tKL8",
+          "rating": 5,
+          "types": [
+            "tourist_attraction",
+            "travel_agency",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V322+7W, Ella, Sri Lanka",
+          "lat": 6.850713499999999,
+          "lng": 81.0523398,
+          "name": "Ella Rock Viewpoint - 02",
+          "place_id": "ChIJkxpvJf9l5DoRA2fUN7KckRM",
+          "rating": 4.6,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V28X+3Q, Ella, Sri Lanka",
+          "lat": 6.8652165,
+          "lng": 81.0494547,
+          "name": "Little's Adams Peak View Point",
+          "place_id": "ChIJhwMb3yhl5DoRumwZOkxjWvA",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Nine Arch Rd, Ella 90122, Sri Lanka",
+          "lat": 6.8892437,
+          "lng": 81.0532379,
+          "name": "Ella Pearl Mountain",
+          "place_id": "ChIJQROLixZl5DoRRUSiEtYRXkM",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V29R+QXX, Temple Rd, Ella, Sri Lanka",
+          "lat": 6.8689746,
+          "lng": 81.0426301,
+          "name": "The wonder view swing ella",
+          "place_id": "ChIJnR1iCQBl5DoRMMB2nlEAgD8",
+          "rating": 4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    "created_at": 1767592847,
+    "updated_at": 1767592847
+  },
+  {
+    "id": "6c43685f-5708-4869-8b20-312fbd703d93",
+    "input_hash": "c2fd5392f8c793ac85cefdcd0f33dc98d93e867f2f2f42206726bfc2605f0a62",
+    "request": {
+      "destination": "Kandy",
+      "start_date": "2026-01-05",
+      "days": 3,
+      "budget": "mid",
+      "interests": [],
+      "pace": "balanced",
+      "notes": ""
+    },
+    "itinerary": {
+      "days": [
+        {
+          "base_city": "Kandy",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 60000,
+            "low": 22000,
+            "mid": 36000,
+            "notes": "Day cost includes meals, short tuk-tuks/car, and entry fees; excludes long-distance transfers. Mid assumes 1 mid-range hotel night for a family room plus standard sightseeing."
+          },
+          "date": "2026-01-05",
+          "day_number": 1,
+          "hotel_area": "Kandy city center or near the lake (walkable to Temple area; easier evenings)",
+          "items": [
+            {
+              "description": "Visit Kandy’s most important sacred site. Arrive early for a calmer experience; follow dress code and temple etiquette.",
+              "location": "Sri Dalada Maligawa, Kandy",
+              "time_block": "08:30-11:00",
+              "title": "Sri Dalada Maligawa (Temple of the Sacred Tooth Relic)",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Compact museum near the temple with exhibits from Buddhist countries—good educational stop for families.",
+              "location": "International Buddhist Museum, Kandy",
+              "time_block": "11:10-12:10",
+              "title": "International Buddhist Museum",
+              "travel_mins": 5,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Eat nearby and take a short break to avoid the warm, humid mid-day period.",
+              "location": "Kandy city center (near Temple Square)",
+              "time_block": "12:30-14:00",
+              "title": "Lunch + rest break",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Explore royal-era history and artifacts around the former palace complex (choose one museum depending on interest/energy).",
+              "location": "Old Royal Palace / Kandy National Museum, Kandy",
+              "time_block": "14:15-15:15",
+              "title": "Old Royal Palace / Kandy National Museum area",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Gentle stroll around the lake, then head to a viewpoint for sunset light over the city.",
+              "location": "Kandy Lake + Kandy Viewpoint (Rajapihilla Mawatha)",
+              "time_block": "16:30-18:00",
+              "title": "Kandy Lake walk + evening viewpoint",
+              "travel_mins": 20,
+              "travel_mode": "car"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Kandy town / hotel area",
+              "meal_type": "breakfast",
+              "suggestion": "Sri Lankan breakfast (string hoppers or hoppers) at your hotel or a nearby cafe"
+            },
+            {
+              "area": "Temple Square / city center",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry with mild options for kids; add fresh juice"
+            },
+            {
+              "area": "Kandy Lake road / city center",
+              "meal_type": "dinner",
+              "suggestion": "Early dinner after viewpoint; choose a family-friendly restaurant with both Sri Lankan and simple Western options"
+            }
+          ],
+          "theme": "Kandy heritage core: temple + museums + lake walk"
+        },
+        {
+          "base_city": "Kandy",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 65000,
+            "low": 22000,
+            "mid": 37000,
+            "notes": "Includes hotel night, Peradeniya tickets, meals, and a half-day private car or multiple tuk-tuks. High assumes more private transport and higher-end dining."
+          },
+          "date": "2026-01-06",
+          "day_number": 2,
+          "hotel_area": "Same hotel in Kandy (lake/city center) to minimize repacking",
+          "items": [
+            {
+              "description": "Relaxed morning among orchids, palms, and shaded lawns. Great for families; keep time for slow walking and photos.",
+              "location": "Royal Botanic Gardens, Peradeniya",
+              "time_block": "08:30-11:30",
+              "title": "Royal Botanic Gardens, Peradeniya",
+              "travel_mins": 25,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Short cultural stop on the way back toward Kandy; quiet and family-friendly with scenic surroundings.",
+              "location": "Getambe Temple, Getambe",
+              "time_block": "11:45-12:30",
+              "title": "Getambe Temple",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Choose a calmer lunch spot outside the busiest city center, then rest during peak humidity.",
+              "location": "Peradeniya / Getambe area",
+              "time_block": "12:45-14:15",
+              "title": "Lunch in Peradeniya/Kandy outskirts + rest",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Visit the temple and enjoy elevated views over Kandy. Go later afternoon for softer light.",
+              "location": "Sri Maha Bodhi Viharaya, Kandy",
+              "time_block": "15:30-17:00",
+              "title": "Sri Maha Bodhi Viharaya (Bahirawakanda) \u0026 city panorama",
+              "travel_mins": 20,
+              "travel_mode": "car"
+            },
+            {
+              "description": "If energy allows, add a second viewpoint nearby for a different angle of the city and lake.",
+              "location": "Arthur's Seat View Point, Kandy",
+              "time_block": "17:15-18:15",
+              "title": "Optional: Arthur's Seat View Point",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Kandy",
+              "meal_type": "breakfast",
+              "suggestion": "Fruit, curd \u0026 treacle, and tea/coffee at hotel"
+            },
+            {
+              "area": "Peradeniya / Getambe",
+              "meal_type": "lunch",
+              "suggestion": "Garden-side lunch or a relaxed restaurant with rice \u0026 curry and kid-friendly plates"
+            },
+            {
+              "area": "Kandy city center",
+              "meal_type": "dinner",
+              "suggestion": "Kandy dinner near the lake; try kottu or a mild curry set"
+            }
+          ],
+          "theme": "Gardens \u0026 temples: Peradeniya + Getambe + city views"
+        },
+        {
+          "base_city": "Kandy",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 38000,
+            "low": 14000,
+            "mid": 22000,
+            "notes": "Assumes no hotel night on Day 3 (check-out). Includes meals, short transport, and sanctuary/museum entries. Add hotel cost if you stay an extra night."
+          },
+          "date": "2026-01-07",
+          "day_number": 3,
+          "hotel_area": "N/A (check-out day); if staying longer, continue in Kandy city center/lake area",
+          "items": [
+            {
+              "description": "Cooler morning forest walk close to town. Keep it easy and stay on main paths; great chance for birds and a peaceful start.",
+              "location": "Udawatta Kele Sanctuary, Kandy",
+              "time_block": "07:30-10:00",
+              "title": "Udawatta Kele Sanctuary (morning walk)",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Small museum near Temple Square; good short stop if you missed it earlier or want a quick cultural add-on.",
+              "location": "Museum of the Tusker Rajah, Kandy",
+              "time_block": "10:30-11:30",
+              "title": "Museum of the Tusker Rajah (optional)",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Pick up tea, spices, and simple souvenirs; keep purchases light and check prices in a couple of shops.",
+              "location": "Raja Veediya / Kandy city center",
+              "time_block": "12:00-13:30",
+              "title": "Lunch + souvenir time (Raja Veediya area)",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Keep this block free for traffic, rain, or a slower pace with kids. If you have time, do a final relaxed lake walk.",
+              "location": "Kandy Lake / city center",
+              "time_block": "14:00-16:00",
+              "title": "Flexible buffer: rest, café time, or lake stroll",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Kandy",
+              "meal_type": "breakfast",
+              "suggestion": "Early breakfast before the sanctuary walk; pack water"
+            },
+            {
+              "area": "Kandy city center",
+              "meal_type": "lunch",
+              "suggestion": "Light lunch (soups, short eats, or rice \u0026 curry) before onward travel"
+            }
+          ],
+          "theme": "Easy nature + light museums + flexible departure day"
+        }
+      ],
+      "route": [
+        "Kandy"
+      ],
+      "summary": "3-day balanced, family-safe Kandy itinerary focusing on cultural highlights around the Temple of the Tooth, gardens in Peradeniya, viewpoints, and an easy nature walk. Weather is warm and humid (~24°C, cloudy), so plan light rain cover and mid-day breaks.",
+      "tips": [
+        "Start Temple of the Tooth visits early to avoid crowds; dress modestly (shoulders/knees covered) and bring socks (shoes off in temple areas).",
+        "Use tuk-tuks for short hops in town; negotiate or use metered/ride-hailing where available. A short private car is best for Peradeniya.",
+        "Carry water, sunscreen, and a light rain jacket/umbrella; humidity is high and showers are possible.",
+        "Keep some cash for tickets, donations, and parking; many small places don’t take cards.",
+        "Plan a mid-day rest when it’s warmest; do viewpoints late afternoon for best light."
+      ],
+      "total_budget": {
+        "currency": "LKR",
+        "high": 175000,
+        "low": 75000,
+        "mid": 115000,
+        "notes": "Approx total for 2 adults + 1 child staying in Kandy for 3 days excluding flights. Includes mid-range hotel (2 nights), local transport (tuk-tuk/car), attraction tickets/donations, and meals. Costs vary by hotel choice and whether you use a private car vs tuk-tuks."
+      },
+      "warnings": [
+        "Watch for monkeys at Udawatta Kele Sanctuary—do not feed them and keep bags closed.",
+        "Temple and museum areas can be crowded; keep valuables secure and stay together with children.",
+        "Roads in Kandy are busy and narrow; allow buffer time for traffic especially around the lake and city center."
+      ]
+    },
+    "weather": {
+      "condition": "Clouds",
+      "enabled": true,
+      "feels_like_c": 24.14,
+      "humidity": 80,
+      "temp_c": 23.63,
+      "wind_mps": 1.91
+    },
+    "places": {
+      "status": "OK",
+      "top_places": [
+        {
+          "address": "Kandy, Sri Lanka",
+          "lat": 7.293609,
+          "lng": 80.641325,
+          "name": "Sri Dalada Maligawa",
+          "place_id": "ChIJ9ftJsS1m4zoRh-gVwQrXZYE",
+          "rating": 4.7,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Forest Department Office, Sangamitta Mawatha, Kandy 20000, Sri Lanka",
+          "lat": 7.2988782,
+          "lng": 80.6424033,
+          "name": "Udawatta Kele Sanctuary",
+          "place_id": "ChIJu-mgYs1n4zoRw-6JzVVr-jY",
+          "rating": 4.4,
+          "types": [
+            "zoo",
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "15 Raja Veediya, Kandy 20000, Sri Lanka",
+          "lat": 7.2947862,
+          "lng": 80.6410831,
+          "name": "Old Royal Palace",
+          "place_id": "ChIJVai-qi1m4zoRxpuMm9CsRWQ",
+          "rating": 4.4,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "20000, Keerthi Sri Rajasinghe Mawatha, Kandy 20000, Sri Lanka",
+          "lat": 7.288817000000001,
+          "lng": 80.63980529999999,
+          "name": "Arthur's Seat View Point, Kandy",
+          "place_id": "ChIJ1-1_Fy9m4zoRn2Ggv2699-k",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JQQ+HWM, Rajapihilla Mawatha, Kandy, Sri Lanka",
+          "lat": 7.288958699999999,
+          "lng": 80.63980029999999,
+          "name": "Kandy Viewpoint",
+          "place_id": "ChIJC04Qg1ln4zoRWo-nOesdp78",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Hemamali Mawatha, Kandy, Sri Lanka",
+          "lat": 7.2940263,
+          "lng": 80.6418502,
+          "name": "International Buddhist Museum | ජාත්‍යන්තර බෞද්ධ කෞතුකාගාරය",
+          "place_id": "ChIJLVaouy1m4zoRn1G0Gcgric8",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Royal Botanic Gardens, Kandy - Colombo Rd, Kandy 20400, Sri Lanka",
+          "lat": 7.2681893,
+          "lng": 80.5966332,
+          "name": "Royal Botanic Gardens, Peradeniya",
+          "place_id": "ChIJ_ZUvrpBo4zoRMxJ5v8KOzpI",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Pahanweta, Temple Square, Kandy, Sri Lanka",
+          "lat": 7.294336899999999,
+          "lng": 80.64118839999999,
+          "name": "Museum of the Tusker Rajah",
+          "place_id": "ChIJF5KmrS1m4zoR2TlKIBtqjoY",
+          "rating": 4.4,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7J82+X6F, Getambe, Sri Lanka",
+          "lat": 7.2674308,
+          "lng": 80.60054889999999,
+          "name": "Getambe Temple (ගැටඹේ පන්සල)",
+          "place_id": "ChIJw_AS38Ro4zoRHgkd1P0dWfk",
+          "rating": 4.8,
+          "types": [
+            "tourist_attraction",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JWJ+793, Bahirawa Kanda Rd, Kandy, Sri Lanka",
+          "lat": 7.2956303,
+          "lng": 80.6309363,
+          "name": "Sri Maha Bodhi Viharaya",
+          "place_id": "ChIJXagiQoBo4zoRxB_cFseRlr4",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JQC+9W8, Aniwatte Tunnel Rd, Kandy, Sri Lanka",
+          "lat": 7.2884235,
+          "lng": 80.6223384,
+          "name": "Aniwatta Tunnel",
+          "place_id": "ChIJnwnlb4Vo4zoR2HUjzu623_Y",
+          "rating": 4.4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JVR+7PG, Kandy, Sri Lanka",
+          "lat": 7.293185899999999,
+          "lng": 80.64182939999999,
+          "name": "Kandy National Museum",
+          "place_id": "ChIJHR_swC1m4zoRV6TPwqwUh1Q",
+          "rating": 4.3,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    "created_at": 1767593903,
+    "updated_at": 1767593903
+  },
+  {
+    "id": "dfed5d2c-f2fc-47c5-ba8b-012d344251fd",
+    "input_hash": "3ce0df9829aa43ed95a355f0f78530425616bf53c8d1d7ab191c235029bd2499",
+    "request": {
+      "destination": "Nuwara Eliya",
+      "start_date": "2026-01-06",
+      "days": 3,
+      "budget": "mid",
+      "interests": [],
+      "pace": "balanced",
+      "notes": ""
+    },
+    "itinerary": {
+      "days": [
+        {
+          "base_city": "Nuwara Eliya",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 80000,
+            "low": 22000,
+            "mid": 42000,
+            "notes": "Day 1 includes local tuk-tuks/car hops, park entries, meals, and 1 night stay. Gregory Lake activities are optional and can increase costs."
+          },
+          "date": "2026-01-06",
+          "day_number": 1,
+          "hotel_area": "Gregory Lake area (quiet, scenic) or Nuwara Eliya town center (walkable)",
+          "items": [
+            {
+              "description": "Easy, family-friendly walk through a well-kept central park with flowers and shaded paths; great for acclimatizing to the cool climate.",
+              "location": "Victoria Park - Nuwara Eliya",
+              "time_block": "09:00-10:30",
+              "title": "Victoria Park stroll",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Gentle forest walk and birdwatching in a compact national park close to town; keep noise low and follow marked paths.",
+              "location": "Galway's Land National Park",
+              "time_block": "10:45-12:00",
+              "title": "Galway's Land National Park (short nature loop)",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Relax by the lake with optional paid activities (pedal boats, pony rides) and a windy lakeside walk; good sunset light when clouds break.",
+              "location": "Gregory Park",
+              "time_block": "14:00-17:30",
+              "title": "Gregory Lake / Gregory Park afternoon",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Settle into the cool evening with hot chocolate/tea and simple desserts; keep dinner early for a relaxed first night.",
+              "location": "Nuwara Eliya town center",
+              "time_block": "18:30-19:30",
+              "title": "Warm evening café stop",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Nuwara Eliya town",
+              "meal_type": "breakfast",
+              "suggestion": "Hotel breakfast or milk rice + egg hoppers"
+            },
+            {
+              "area": "Near Victoria Park / town center",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry or kottu with mild spice option for kids"
+            },
+            {
+              "area": "Near Gregory Lake / town center",
+              "meal_type": "dinner",
+              "suggestion": "Soup + grilled chicken/veg, or Sri Lankan short eats with tea"
+            }
+          ],
+          "theme": "Town parks + lakeside evening"
+        },
+        {
+          "base_city": "Nuwara Eliya",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 90000,
+            "low": 24000,
+            "mid": 46000,
+            "notes": "Includes transport for Moon Plains (car + likely jeep/entry), meals, and 1 night stay. Moon Plains costs vary depending on on-site transport/fees."
+          },
+          "date": "2026-01-07",
+          "day_number": 2,
+          "hotel_area": "Gregory Lake area (easy access to Moon Plains road) or town center",
+          "items": [
+            {
+              "description": "Early climb for panoramic views over Nuwara Eliya; go slowly and bring a windproof layer. Turn back if visibility is poor.",
+              "location": "Single Tree Hill",
+              "time_block": "06:00-08:00",
+              "title": "Single Tree Hill sunrise viewpoint",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Short, respectful visit; dress modestly (covered shoulders/knees).",
+              "location": "Swarnagiri Maha Viharaya / Single Tree Temple",
+              "time_block": "08:15-09:00",
+              "title": "Temple stop (optional cultural visit)",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Scenic plateau with big-sky views when clouds allow; typical access is via jeep/park transport arranged on site. Keep hats/jackets due to wind.",
+              "location": "Moon Plains",
+              "time_block": "10:00-13:00",
+              "title": "Moon Plains (mini-world’s end viewpoint)",
+              "travel_mins": 25,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Short hike to a popular waterfall viewpoint above town; trail can be slippery—wear proper shoes and supervise children closely.",
+              "location": "Lover's Leap Waterfall",
+              "time_block": "15:00-17:00",
+              "title": "Lover's Leap Waterfall",
+              "travel_mins": 20,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Recharge after a full day of viewpoints; evenings are cold so plan indoor time.",
+              "location": "Hotel in Nuwara Eliya",
+              "time_block": "17:30-18:30",
+              "title": "Downtime at hotel / board games / rest",
+              "travel_mins": 10,
+              "travel_mode": "car"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Hotel",
+              "meal_type": "breakfast",
+              "suggestion": "Early breakfast (toast/omelet/fruit) before the hike"
+            },
+            {
+              "area": "On the way back from Moon Plains / town",
+              "meal_type": "lunch",
+              "suggestion": "Simple set menu or fried rice; keep it light before the afternoon waterfall walk"
+            },
+            {
+              "area": "Nuwara Eliya town",
+              "meal_type": "dinner",
+              "suggestion": "Steamboat/hotpot style meal or warm rice \u0026 curry (ask for mild)"
+            }
+          ],
+          "theme": "Viewpoints + easy hike"
+        },
+        {
+          "base_city": "Nuwara Eliya",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 55000,
+            "low": 16000,
+            "mid": 30000,
+            "notes": "Day 3 focuses on a longer car outing to Upper Bomburu Falls plus meals and optional activities. If adding an extra night, increase by typical hotel night cost."
+          },
+          "date": "2026-01-08",
+          "day_number": 3,
+          "hotel_area": "No overnight required if departing; if staying, keep same area near Gregory Lake or town center",
+          "items": [
+            {
+              "description": "More off-the-beaten-path waterfall experience with a longer walk; go early to avoid afternoon rain and carry water/snacks.",
+              "location": "Upper Bomburu Falls",
+              "time_block": "08:00-10:30",
+              "title": "Upper Bomburu Falls (day trip, nature walk)",
+              "travel_mins": 75,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Spend time at safe viewpoints; avoid climbing wet rocks. Start return before clouds thicken.",
+              "location": "Upper Bomburu Falls",
+              "time_block": "10:30-12:30",
+              "title": "Waterfall viewing + return to trailhead",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Refuel after the hike with a hot meal; choose kid-friendly options.",
+              "location": "Nuwara Eliya / on the return route",
+              "time_block": "13:30-14:30",
+              "title": "Lunch stop (warm, simple)",
+              "travel_mins": 60,
+              "travel_mode": "car"
+            },
+            {
+              "description": "Easy lakeside walk to close the trip; pick up tea and small souvenirs around town.",
+              "location": "Gregory Park",
+              "time_block": "15:30-17:00",
+              "title": "Gregory Lake final stroll + souvenir stop",
+              "travel_mins": 15,
+              "travel_mode": "car"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Hotel",
+              "meal_type": "breakfast",
+              "suggestion": "Hearty breakfast (string hoppers or eggs + toast) before the longer drive"
+            },
+            {
+              "area": "Nuwara Eliya / return route",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry or noodles; ask for less chili"
+            },
+            {
+              "area": "Nuwara Eliya town",
+              "meal_type": "dinner",
+              "suggestion": "If staying late: bakery short eats and tea; otherwise plan dinner at next destination"
+            }
+          ],
+          "theme": "Waterfall day trip + relaxed finish"
+        }
+      ],
+      "route": [
+        "Nuwara Eliya"
+      ],
+      "summary": "3-day, balanced-pace family-friendly getaway based in Nuwara Eliya, focusing on parks, viewpoints, gentle hikes, and waterfalls. Expect cool, cloudy hill-country weather (~16°C), so pack warm layers and rain protection.",
+      "tips": [
+        "Bring a light jacket/hoodie and a rain jacket; evenings can feel cold in Nuwara Eliya.",
+        "Start viewpoints early morning for clearer skies; clouds roll in fast.",
+        "Use tuk-tuks for short hops in town; for Moon Plains and remote falls, hire a car with driver for half-day/full-day for comfort and time savings.",
+        "Carry cash for small entry tickets/parking and local snack stalls; ATMs can be busy on weekends.",
+        "If traveling with kids, keep a spare set of warm clothes after lake activities due to wind chill."
+      ],
+      "total_budget": {
+        "currency": "LKR",
+        "high": 220000,
+        "low": 75000,
+        "mid": 130000,
+        "notes": "Estimate for 2 adults + 1 child for 3 days in Nuwara Eliya (excluding flights). Includes mid-range lodging, meals, local transport by tuk-tuk/private car, and entry fees/activities. Costs vary by hotel choice, vehicle type, and paid activities at Gregory Lake."
+      },
+      "warnings": [
+        "Waterfall trails can be slippery in cloudy/wet conditions—wear grippy shoes and avoid standing close to edges.",
+        "Moon Plains can be windy and chilly; keep children close near viewpoints.",
+        "Roads are narrow with sharp bends; plan conservative travel times and avoid late-night long drives."
+      ]
+    },
+    "weather": {
+      "condition": "Clouds",
+      "enabled": true,
+      "feels_like_c": 16.08,
+      "humidity": 78,
+      "temp_c": 16.35,
+      "wind_mps": 2.35
+    },
+    "places": {
+      "status": "OK",
+      "top_places": [
+        {
+          "address": "Nuwara Eliya 22200, Sri Lanka",
+          "lat": 6.978281099999999,
+          "lng": 80.7866097,
+          "name": "Lover's Leap Waterfall",
+          "place_id": "ChIJcU1HJ3GB4zoRF-NtFybYYU8",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "XQ99+J7G, PBC Hwy, Nuwara Eliya 22200, Sri Lanka",
+          "lat": 6.9690563,
+          "lng": 80.7682045,
+          "name": "Victoria Park - Nuwara Eliya",
+          "place_id": "ChIJS3H6iFKA4zoRTAAkU7-vRLs",
+          "rating": 4.4,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Ranhawadigama Rd, Nuwara Eliya 22200, Sri Lanka",
+          "lat": 6.9523269,
+          "lng": 80.79640409999999,
+          "name": "Moon Plains",
+          "place_id": "ChIJPe_6PWZ_5DoRA8r8PTtOo50",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "XQ57+426, Nuwara Eliya, Sri Lanka",
+          "lat": 6.957785100000001,
+          "lng": 80.7625008,
+          "name": "Single Tree Hill",
+          "place_id": "ChIJAQAAAPSA4zoRU_XHvnf1byo",
+          "rating": 4.4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Department of Wildlife Conservation, Havelock Rd, Nuwara Eliya 22200, Sri Lanka",
+          "lat": 6.966322099999999,
+          "lng": 80.7779056,
+          "name": "Galway's Land National Park",
+          "place_id": "ChIJqzeWFlqA4zoRfKAyZUgZNzQ",
+          "rating": 4.2,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "XQ4G+PX6, Peradeniya-Badulla-Chenkaladi Hwy, Nuwara Eliya 22200, Sri Lanka",
+          "lat": 6.9567901,
+          "lng": 80.7773807,
+          "name": "Gregory Park",
+          "place_id": "ChIJFwl2e_eA4zoR3zy3blrmAZc",
+          "rating": 4.5,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "XQ48+2FF, Avissawella - Hatton - Nuwara Eliya Hwy, Nuwara Eliya, Sri Lanka",
+          "lat": 6.9550566,
+          "lng": 80.7661846,
+          "name": "Swarnagiri Maha Viharaya / Single Tree Temple",
+          "place_id": "ChIJcYTkG_6A4zoRFPjr0OoC1io",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "WPWP+JVQ, Nuwara Eliya, Sri Lanka",
+          "lat": 6.946577599999999,
+          "lng": 80.7372359,
+          "name": "Glassaugh Falls",
+          "place_id": "ChIJHQXRbW6B4zoRoQLa0RKM9xM",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "XR84+4MW, Nuwara Eliya, Sri Lanka",
+          "lat": 6.965355199999999,
+          "lng": 80.80670289999999,
+          "name": "Bomburuella Reservoir",
+          "place_id": "ChIJoTmM0n6A4zoRERMvHW8LnWM",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "XQHJ+845, Nuwara Eliya, Sri Lanka",
+          "lat": 6.978272100000001,
+          "lng": 80.7803632,
+          "name": "Galwala Ella Falls",
+          "place_id": "ChIJ5WlXHUeA4zoRfzC_W8JHWBg",
+          "rating": 4.1,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "300A Avissawella-Hatton- Hwy, Nuwara Eliya, Sri Lanka",
+          "lat": 6.9498611,
+          "lng": 80.77172379999999,
+          "name": "Windy Corner Falls",
+          "place_id": "ChIJPd32W_uA4zoRK5brV-_6rYM",
+          "rating": 4.1,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "WRXJ+37, Nuwara Eliya, Sri Lanka",
+          "lat": 6.947651199999999,
+          "lng": 80.83067539999999,
+          "name": "Upper Bomburu Falls",
+          "place_id": "ChIJ-2Z3mtd_5DoR_IXdjd4vEB0",
+          "rating": 4.8,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    "created_at": 1767594135,
+    "updated_at": 1767594135
+  },
+  {
+    "id": "14986623-fe70-4e11-908a-6d1661f752fa",
+    "input_hash": "dbffb4d372e98c10faa95aaa421d03333f3cf801df1dacfcd7e623f57fa9a956",
+    "request": {
+      "destination": "Kandy",
+      "start_date": "2026-01-05",
+      "days": 3,
+      "budget": "low",
+      "interests": [],
+      "pace": "chill",
+      "notes": ""
+    },
+    "itinerary": {
+      "days": [
+        {
+          "base_city": "Kandy",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 35000,
+            "low": 9000,
+            "mid": 18000,
+            "notes": "Includes budget room (fan/AC varies), 3 local meals, tuk-tuks inside town, and 1–3 entry tickets (temple/museum)."
+          },
+          "date": "2026-01-05",
+          "day_number": 1,
+          "hotel_area": "Kandy Lake / Temple Square area (walkable to main sights)",
+          "items": [
+            {
+              "description": "Visit Kandy’s most important temple complex; take time for the main shrine areas and courtyard. Dress modestly and expect security checks.",
+              "location": "Sri Dalada Maligawa, Kandy",
+              "time_block": "08:30-10:30",
+              "title": "Sri Dalada Maligawa (Temple of the Tooth Relic)",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Small museum within the temple precinct explaining global Buddhist traditions; good low-effort cultural stop.",
+              "location": "International Buddhist Museum, Kandy",
+              "time_block": "10:45-11:30",
+              "title": "International Buddhist Museum",
+              "travel_mins": 5,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Slow museum visit near the temple area. If you prefer shorter: do the Old Royal Palace; if you want more history: Kandy National Museum.",
+              "location": "Old Royal Palace / Kandy National Museum, Kandy",
+              "time_block": "11:40-12:30",
+              "title": "Old Royal Palace \u0026 Kandy National Museum (choose one if tired)",
+              "travel_mins": 5,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Relaxed lakeside stroll for photos and shade; easy family-friendly downtime after midday heat.",
+              "location": "Kandy Lake, Kandy",
+              "time_block": "16:30-17:30",
+              "title": "Kandy Lake walk",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Short ride up for panoramic views over the lake and town; go before dark for easier return.",
+              "location": "Kandy Viewpoint, Rajapihilla Mawatha",
+              "time_block": "17:45-18:30",
+              "title": "Kandy Viewpoint (sunset if clear)",
+              "travel_mins": 15,
+              "travel_mode": "tuk-tuk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Kandy town (near the lake/Temple area)",
+              "meal_type": "breakfast",
+              "suggestion": "Hoppers or string hoppers with dhal and sambol"
+            },
+            {
+              "area": "City centre (Peradeniya Rd or near Temple Square)",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry at a local buffet-style spot (ask for mild if needed)"
+            },
+            {
+              "area": "Kandy town",
+              "meal_type": "dinner",
+              "suggestion": "Kottu roti or fried rice; keep it early for a chill night"
+            }
+          ],
+          "theme": "Temple \u0026 Old City (easy pace)"
+        },
+        {
+          "base_city": "Kandy",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 38000,
+            "low": 10000,
+            "mid": 20000,
+            "notes": "Botanical Gardens ticket + local transport adds cost today. Keep spend low by limiting paid add-ons and eating local."
+          },
+          "date": "2026-01-06",
+          "day_number": 2,
+          "hotel_area": "Peradeniya Rd side or near the lake (easy tuk-tuk access)",
+          "items": [
+            {
+              "description": "Leisurely morning in the gardens (orchids, palm avenues, giant trees). Best before midday heat and crowds.",
+              "location": "Royal Botanic Gardens, Peradeniya",
+              "time_block": "08:00-10:15",
+              "title": "Royal Botanic Gardens, Peradeniya",
+              "travel_mins": 25,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "Short, calm visit to a well-known temple on the way back toward Kandy.",
+              "location": "Getambe Temple, Getambe",
+              "time_block": "10:30-11:00",
+              "title": "Getambe Temple (quick cultural stop)",
+              "travel_mins": 10,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "Gentle afternoon walk on main trails; great for birds and a cooler feel. Avoid staying late.",
+              "location": "Udawatta Kele Sanctuary, Kandy",
+              "time_block": "15:30-17:00",
+              "title": "Udawatta Kele Sanctuary (easy forest walk)",
+              "travel_mins": 10,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "If skies allow, end with a relaxed overlook of Kandy before dinner.",
+              "location": "Arthur's Seat View Point, Kandy",
+              "time_block": "17:20-18:00",
+              "title": "Arthur's Seat / Kandy viewpoint stop",
+              "travel_mins": 15,
+              "travel_mode": "tuk-tuk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Your guesthouse or nearby bakery/cafe",
+              "meal_type": "breakfast",
+              "suggestion": "Milk rice (kiribath) with lunu miris + tea"
+            },
+            {
+              "area": "Peradeniya / on the return route",
+              "meal_type": "lunch",
+              "suggestion": "Short eats (egg roti/patties) or a simple rice \u0026 curry to keep costs low"
+            },
+            {
+              "area": "Kandy town",
+              "meal_type": "dinner",
+              "suggestion": "Vegetarian rice \u0026 curry (good after a walking day)"
+            }
+          ],
+          "theme": "Nature \u0026 Gardens (low-effort outdoors)"
+        },
+        {
+          "base_city": "Kandy",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 35000,
+            "low": 9000,
+            "mid": 18000,
+            "notes": "Lower-cost day with mostly free activities; costs depend on optional museum entries and tuk-tuk usage."
+          },
+          "date": "2026-01-07",
+          "day_number": 3,
+          "hotel_area": "Kandy town (easy access for checkout and onward transport)",
+          "items": [
+            {
+              "description": "Morning visit for views over Kandy and a calm temple atmosphere; go early for cooler temperatures.",
+              "location": "Sri Maha Bodhi Viharaya, Bahirawa Kanda Rd, Kandy",
+              "time_block": "08:30-10:00",
+              "title": "Sri Maha Bodhi Viharaya (Bahirawakanda Buddha statue)",
+              "travel_mins": 15,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "Chill browsing for spices/tea/souvenirs; keep an eye on belongings in busy areas.",
+              "location": "Kandy city centre (around the lake and main streets)",
+              "time_block": "10:30-12:00",
+              "title": "Town time: local markets \u0026 souvenir streets",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Small museum near the temple area; do it only if you enjoy niche local history and want a low-effort indoor activity.",
+              "location": "Museum of the Tusker Rajah, Temple Square, Kandy",
+              "time_block": "15:30-16:15",
+              "title": "Museum of the Tusker Rajah (optional quick stop)",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Slow walk and a tea/coffee stop; ideal wind-down before departure/next leg.",
+              "location": "Kandy Lake area",
+              "time_block": "16:30-18:00",
+              "title": "Relaxed lakeside evening + café stop",
+              "travel_mins": 5,
+              "travel_mode": "walk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Kandy town",
+              "meal_type": "breakfast",
+              "suggestion": "Sri Lankan omelette + toast or roti + tea"
+            },
+            {
+              "area": "City centre",
+              "meal_type": "lunch",
+              "suggestion": "Noodles or fried rice from a simple local restaurant"
+            },
+            {
+              "area": "Kandy town",
+              "meal_type": "dinner",
+              "suggestion": "Light meal: vegetable kottu or soup + bakery items if leaving early next day"
+            }
+          ],
+          "theme": "Easy temples \u0026 free time (shopping + views)"
+        }
+      ],
+      "route": [
+        "Kandy"
+      ],
+      "summary": "3 chill days based in Kandy focusing on the Temple of the Tooth area, lakeside viewpoints, light nature walks, and Peradeniya gardens. All activities are family-safe, mostly walkable or short tuk-tuk rides. Weather is warm and humid with clouds (~24°C feels-like).",
+      "tips": [
+        "Start Temple of the Tooth visits early to avoid crowds; dress modestly (shoulders/knees covered) and bring socks for hot paving.",
+        "Use tuk-tuks for short hops; agree on a metered fare or price before starting.",
+        "For Udawatta Kele, go in daylight and stick to main paths; carry water due to humidity.",
+        "Carry small cash for tickets and donations; many small counters don’t take cards.",
+        "Plan viewpoints near sunset but leave a little buffer for traffic around the lake."
+      ],
+      "total_budget": {
+        "currency": "LKR",
+        "high": 110000,
+        "low": 30000,
+        "mid": 60000,
+        "notes": "Estimates for 1 person for 3 days in Kandy (budget guesthouse, local meals, tuk-tuks within town, and standard entry fees). Excludes long-distance transport to/from Kandy and private driver hire. Costs vary by nationality-based ticketing and how many paid museums you choose."
+      },
+      "warnings": [
+        "Humidity is high; take breaks and hydrate, especially during midday walks.",
+        "Monkeys can be present near forested areas—don’t feed them and secure bags/food.",
+        "Roads around Kandy can be congested; allow extra time even for short distances.",
+        "Watch belongings in crowded areas around the Temple and markets."
+      ]
+    },
+    "weather": {
+      "condition": "Clouds",
+      "enabled": true,
+      "feels_like_c": 24.14,
+      "humidity": 80,
+      "temp_c": 23.63,
+      "wind_mps": 1.91
+    },
+    "places": {
+      "status": "OK",
+      "top_places": [
+        {
+          "address": "Kandy, Sri Lanka",
+          "lat": 7.293609,
+          "lng": 80.641325,
+          "name": "Sri Dalada Maligawa",
+          "place_id": "ChIJ9ftJsS1m4zoRh-gVwQrXZYE",
+          "rating": 4.7,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Forest Department Office, Sangamitta Mawatha, Kandy 20000, Sri Lanka",
+          "lat": 7.2988782,
+          "lng": 80.6424033,
+          "name": "Udawatta Kele Sanctuary",
+          "place_id": "ChIJu-mgYs1n4zoRw-6JzVVr-jY",
+          "rating": 4.4,
+          "types": [
+            "zoo",
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "15 Raja Veediya, Kandy 20000, Sri Lanka",
+          "lat": 7.2947862,
+          "lng": 80.6410831,
+          "name": "Old Royal Palace",
+          "place_id": "ChIJVai-qi1m4zoRxpuMm9CsRWQ",
+          "rating": 4.4,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "20000, Keerthi Sri Rajasinghe Mawatha, Kandy 20000, Sri Lanka",
+          "lat": 7.288817000000001,
+          "lng": 80.63980529999999,
+          "name": "Arthur's Seat View Point, Kandy",
+          "place_id": "ChIJ1-1_Fy9m4zoRn2Ggv2699-k",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JQQ+HWM, Rajapihilla Mawatha, Kandy, Sri Lanka",
+          "lat": 7.288958699999999,
+          "lng": 80.63980029999999,
+          "name": "Kandy Viewpoint",
+          "place_id": "ChIJC04Qg1ln4zoRWo-nOesdp78",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Hemamali Mawatha, Kandy, Sri Lanka",
+          "lat": 7.2940263,
+          "lng": 80.6418502,
+          "name": "International Buddhist Museum | ජාත්‍යන්තර බෞද්ධ කෞතුකාගාරය",
+          "place_id": "ChIJLVaouy1m4zoRn1G0Gcgric8",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Royal Botanic Gardens, Kandy - Colombo Rd, Kandy 20400, Sri Lanka",
+          "lat": 7.2681893,
+          "lng": 80.5966332,
+          "name": "Royal Botanic Gardens, Peradeniya",
+          "place_id": "ChIJ_ZUvrpBo4zoRMxJ5v8KOzpI",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Pahanweta, Temple Square, Kandy, Sri Lanka",
+          "lat": 7.294336899999999,
+          "lng": 80.64118839999999,
+          "name": "Museum of the Tusker Rajah",
+          "place_id": "ChIJF5KmrS1m4zoR2TlKIBtqjoY",
+          "rating": 4.4,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7J82+X6F, Getambe, Sri Lanka",
+          "lat": 7.2674308,
+          "lng": 80.60054889999999,
+          "name": "Getambe Temple (ගැටඹේ පන්සල)",
+          "place_id": "ChIJw_AS38Ro4zoRHgkd1P0dWfk",
+          "rating": 4.8,
+          "types": [
+            "tourist_attraction",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JWJ+793, Bahirawa Kanda Rd, Kandy, Sri Lanka",
+          "lat": 7.2956303,
+          "lng": 80.6309363,
+          "name": "Sri Maha Bodhi Viharaya",
+          "place_id": "ChIJXagiQoBo4zoRxB_cFseRlr4",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JQC+9W8, Aniwatte Tunnel Rd, Kandy, Sri Lanka",
+          "lat": 7.2884235,
+          "lng": 80.6223384,
+          "name": "Aniwatta Tunnel",
+          "place_id": "ChIJnwnlb4Vo4zoR2HUjzu623_Y",
+          "rating": 4.4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "7JVR+7PG, Kandy, Sri Lanka",
+          "lat": 7.293185899999999,
+          "lng": 80.64182939999999,
+          "name": "Kandy National Museum",
+          "place_id": "ChIJHR_swC1m4zoRV6TPwqwUh1Q",
+          "rating": 4.3,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    "created_at": 1767594189,
+    "updated_at": 1767594189
+  },
+  {
+    "id": "b7082ab9-7f01-4cf9-8554-7f1320da2626",
+    "input_hash": "ddd669845e4f9657a7c3d7b6741fea72064000f78097157839f2dd3dd3370ea1",
+    "request": {
+      "destination": "Ella",
+      "start_date": "2026-01-08",
+      "days": 3,
+      "budget": "low",
+      "interests": [],
+      "pace": "chill",
+      "notes": ""
+    },
+    "itinerary": {
+      "days": [
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 17000,
+            "low": 5500,
+            "mid": 10500,
+            "notes": "Low assumes budget guesthouse (fan/basic room) + local meals + minimal tuk-tuk. Some viewpoint/swing spots may charge small fees."
+          },
+          "date": "2026-01-08",
+          "day_number": 1,
+          "hotel_area": "Ella town center (walkable to cafés and short tuk-tuk rides to trailheads)",
+          "items": [
+            {
+              "description": "Gentle morning hike for panoramic valley views. Go early to beat clouds and crowds.",
+              "location": "Little Adam's Peak Trailhead",
+              "time_block": "08:00-10:30",
+              "title": "Little Adam’s Peak (sunrise-ish easy hike)",
+              "travel_mins": 20,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Short extra walks for viewpoints; keep it relaxed and return toward town.",
+              "location": "Little adam's peak View Point",
+              "time_block": "10:45-12:00",
+              "title": "Viewpoint photo stops near Little Adam’s Peak",
+              "travel_mins": 15,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Slow afternoon: browse small shops, grab tea/coffee, rest after the hike.",
+              "location": "Ella town (Main Street)",
+              "time_block": "14:00-15:30",
+              "title": "Chill café time + Ella town wander",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Quick stop for views and photos. Only go if weather is clear and you’re comfortable with heights.",
+              "location": "The wonder view swing ella",
+              "time_block": "16:30-18:00",
+              "title": "Optional swing/view spot (skip if rainy)",
+              "travel_mins": 15,
+              "travel_mode": "tuk-tuk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella town",
+              "meal_type": "breakfast",
+              "suggestion": "Hoppers or string hoppers with dhal + tea"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "lunch",
+              "suggestion": "Rice \u0026 curry (ask for a small mixed portion)"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "dinner",
+              "suggestion": "Kottu or veggie fried rice; share portions if needed"
+            }
+          ],
+          "theme": "Easy viewpoints + town stroll (chill start)"
+        },
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 19000,
+            "low": 6500,
+            "mid": 12000,
+            "notes": "Includes extra tuk-tuk rides for cave/waterfalls. Entrance/parking fees may apply at some spots."
+          },
+          "date": "2026-01-09",
+          "day_number": 2,
+          "hotel_area": "Ella town center or slightly outside on the Passara Road (often cheaper, still close)",
+          "items": [
+            {
+              "description": "Short drive toward the Ravana/Ella-Wellawaya road for waterfalls and the cave.",
+              "location": "Ravana's Cave",
+              "time_block": "08:30-09:15",
+              "title": "Ride out to Ravana area",
+              "travel_mins": 20,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "Explore the cave (lots of steps). Go slow and wear shoes with grip.",
+              "location": "Ravana's Cave",
+              "time_block": "09:15-10:45",
+              "title": "Ravana’s Cave",
+              "travel_mins": 5,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Quick stop at a nearby waterfall for photos and a breather. Avoid getting too close to fast water.",
+              "location": "Kuda Ravana Ella waterfall",
+              "time_block": "11:15-12:30",
+              "title": "Kuda Ravana Ella waterfall (short visit)",
+              "travel_mins": 10,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "More relaxed waterfall stop closer to Ella; good for a calm afternoon.",
+              "location": "Kital Ella Waterfall",
+              "time_block": "14:30-16:00",
+              "title": "Kital Ella Waterfall (quieter option)",
+              "travel_mins": 15,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "Head back to town for a slow evening, especially if it’s cloudy/cool.",
+              "location": "Ella town (Main Street)",
+              "time_block": "16:30-18:00",
+              "title": "Early evening rest + tea",
+              "travel_mins": 10,
+              "travel_mode": "tuk-tuk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella town",
+              "meal_type": "breakfast",
+              "suggestion": "Egg roti or plain roti with coconut sambol"
+            },
+            {
+              "area": "Near Ella town / on the way back from Ravana area",
+              "meal_type": "lunch",
+              "suggestion": "Bakery lunch (short eats) + fruit to keep budget low"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "dinner",
+              "suggestion": "Rice \u0026 curry (vegetarian is usually cheapest)"
+            }
+          ],
+          "theme": "Waterfalls + Ravana cave (relaxed nature day)"
+        },
+        {
+          "base_city": "Ella",
+          "cost_range": {
+            "currency": "LKR",
+            "high": 16000,
+            "low": 6000,
+            "mid": 10500,
+            "notes": "Low assumes self-guided hike and mostly walking. Add cost if hiring a guide or using more tuk-tuks."
+          },
+          "date": "2026-01-10",
+          "day_number": 3,
+          "hotel_area": "Ella town center (easiest for early start and access to food)",
+          "items": [
+            {
+              "description": "Early start for the classic hike. Pace it slow and turn back if visibility is poor. Bring water and a light rain layer.",
+              "location": "Ella Rock Trailhead",
+              "time_block": "06:00-10:30",
+              "title": "Ella Rock hike (main trail)",
+              "travel_mins": 15,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "Rest and hydrate after the hike; keep the afternoon easy.",
+              "location": "Ella town (Main Street)",
+              "time_block": "11:30-12:15",
+              "title": "Recovery break",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            },
+            {
+              "description": "If you still have energy, do a short tuk-tuk ride to a nearby viewpoint for a final look over the valley.",
+              "location": "Ella Rock Viewpoint - 02",
+              "time_block": "14:30-15:30",
+              "title": "Optional: extra viewpoint stop",
+              "travel_mins": 15,
+              "travel_mode": "tuk-tuk"
+            },
+            {
+              "description": "Keep the evening free for shopping, relaxing, and preparing for departure.",
+              "location": "Ella town (Main Street)",
+              "time_block": "16:30-18:00",
+              "title": "Slow sunset stroll and packing time",
+              "travel_mins": 10,
+              "travel_mode": "walk"
+            }
+          ],
+          "meals": [
+            {
+              "area": "Ella town",
+              "meal_type": "breakfast",
+              "suggestion": "Takeaway buns/short eats + tea before the early hike"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "lunch",
+              "suggestion": "Noodles or fried rice (easy post-hike meal)"
+            },
+            {
+              "area": "Ella town",
+              "meal_type": "dinner",
+              "suggestion": "Soup/noodles or a simple curry; keep it light after hiking"
+            }
+          ],
+          "theme": "Signature hike (choose your effort) + final viewpoints"
+        }
+      ],
+      "route": [
+        "Ella"
+      ],
+      "summary": "3 chill, low-budget days based in Ella with easy hikes, viewpoints and nearby waterfalls/cave. Weather is cool and cloudy (~18–19°C), so pack a light rain layer and start hikes early.",
+      "tips": [
+        "Start Little Adam’s Peak and Ella Rock early for cooler temps and clearer views (clouds often build later).",
+        "Use tuk-tuks for short hops (town to trailheads); agree on price before starting or use meter if available.",
+        "Carry cash; some small eateries and tuk-tuks don’t take cards.",
+        "Wear grippy shoes—trails can be muddy/slippery after rain.",
+        "Bring a reusable water bottle and snacks for hikes; shops are limited on the trails."
+      ],
+      "total_budget": {
+        "currency": "LKR",
+        "high": 52000,
+        "low": 18000,
+        "mid": 33000,
+        "notes": "Estimate for 1 person for 3 days in Ella (excluding long-distance transport to/from Ella). Low: budget guesthouse + local meals + small entrance/transport. Mid/High allow more tuk-tuk use, nicer rooms, and paid viewpoints."
+      },
+      "warnings": [
+        "Avoid hiking Ella Rock in heavy rain or fog—paths can be confusing and slippery.",
+        "At waterfalls and rocks, keep distance from edges; surfaces can be slick.",
+        "Watch for leeches after rain on forested trails; consider socks/repellent.",
+        "Tuk-tuk drivers may quote high prices for tourists—confirm total cost before riding."
+      ]
+    },
+    "weather": {
+      "condition": "Clouds",
+      "enabled": true,
+      "feels_like_c": 18.62,
+      "humidity": 84,
+      "temp_c": 18.52,
+      "wind_mps": 2.63
+    },
+    "places": {
+      "status": "OK",
+      "top_places": [
+        {
+          "address": "V28V+FRM, A23, Ella, Sri Lanka",
+          "lat": 6.8662092,
+          "lng": 81.0445561,
+          "name": "Kuda Ravana Ella waterfall",
+          "place_id": "ChIJk6Socrtl5DoR4NnxYbPPr6c",
+          "rating": 4.3,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V27X+QFR, Ella, Sri Lanka",
+          "lat": 6.8644786,
+          "lng": 81.04864169999999,
+          "name": "Ravana's Cave",
+          "place_id": "ChIJRd0BrLZl5DoRJDhdFoCX3gw",
+          "rating": 4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V25V+4JJ, Unnamed Road, Ella, Sri Lanka",
+          "lat": 6.857849099999999,
+          "lng": 81.04402259999999,
+          "name": "Ella Rock Trailhead",
+          "place_id": "ChIJnWx4AZhl5DoRrzo0tVTuyJw",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Ella, Sri Lanka",
+          "lat": 6.8640932,
+          "lng": 81.06472289999999,
+          "name": "Little adam's peak View Point",
+          "place_id": "ChIJS8581XRl5DoRPo5uWkR9zXQ",
+          "rating": 4.7,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V28W+MJF, Ella, Sri Lanka",
+          "lat": 6.8666988,
+          "lng": 81.046553,
+          "name": "Kital Ella Waterfall",
+          "place_id": "ChIJn33gk7xl5DoR6jgM0a9p6dw",
+          "rating": 4.2,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Oya arawa, Kithalella, Ella 90090, Sri Lanka",
+          "lat": 6.862608499999999,
+          "lng": 81.04411379999999,
+          "name": "Small rawana waterfall",
+          "place_id": "ChIJo_Ebe1tl5DoRiqw5w3rdOaM",
+          "rating": 4.3,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Ella, Sri Lanka",
+          "lat": 6.869211699999999,
+          "lng": 81.0602456,
+          "name": "Little Adam's Peak Trailhead",
+          "place_id": "ChIJTyaDze9l5DoRO1_CRIrSq1U",
+          "rating": 4.7,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Vemullahena, Ella 90090, Sri Lanka",
+          "lat": 6.8737128,
+          "lng": 81.04617669999999,
+          "name": "Ella Tuk Tuk \u0026 Taxi Tours With Dilshan",
+          "place_id": "ChIJEUSKE1Zl5DoRfhNy_1_tKL8",
+          "rating": 5,
+          "types": [
+            "tourist_attraction",
+            "travel_agency",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V322+7W, Ella, Sri Lanka",
+          "lat": 6.850713499999999,
+          "lng": 81.0523398,
+          "name": "Ella Rock Viewpoint - 02",
+          "place_id": "ChIJkxpvJf9l5DoRA2fUN7KckRM",
+          "rating": 4.6,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V28X+3Q, Ella, Sri Lanka",
+          "lat": 6.8652165,
+          "lng": 81.0494547,
+          "name": "Little's Adams Peak View Point",
+          "place_id": "ChIJhwMb3yhl5DoRumwZOkxjWvA",
+          "rating": 4.6,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "Nine Arch Rd, Ella 90122, Sri Lanka",
+          "lat": 6.8892437,
+          "lng": 81.0532379,
+          "name": "Ella Pearl Mountain",
+          "place_id": "ChIJQROLixZl5DoRRUSiEtYRXkM",
+          "rating": 4.5,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "address": "V29R+QXX, Temple Rd, Ella, Sri Lanka",
+          "lat": 6.8689746,
+          "lng": 81.0426301,
+          "name": "The wonder view swing ella",
+          "place_id": "ChIJnR1iCQBl5DoRMMB2nlEAgD8",
+          "rating": 4,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    "created_at": 1767594428,
+    "updated_at": 1767594428
+  }
+]
