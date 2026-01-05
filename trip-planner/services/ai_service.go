@@ -33,10 +33,25 @@ type responsesResp struct {
 	} `json:"output"`
 }
 
-func (s *AIService) GenerateTrip(ctx context.Context, req models.TripRequest, places any, weather any) (map[string]any, error) {
+func (s *AIService) GenerateTrip(
+	ctx context.Context,
+	req models.TripRequest,
+	places any,
+	weather any,
+) (map[string]any, error) {
+
 	prompt := buildPrompt(req, places, weather)
 
-	payload := responsesReq{Model: s.model, Input: prompt}
+	payload := map[string]any{
+		"model": s.model, // gpt-5.2
+		"input": prompt,
+
+		// HARD JSON enforcement (important)
+		"response_format": map[string]any{
+			"type": "json_object",
+		},
+	}
+
 	headers := map[string]string{
 		"Authorization": "Bearer " + s.apiKey,
 		"Content-Type":  "application/json",
@@ -45,23 +60,45 @@ func (s *AIService) GenerateTrip(ctx context.Context, req models.TripRequest, pl
 	ctx, cancel := context.WithTimeout(ctx, 120*time.Second)
 	defer cancel()
 
-	var raw responsesResp
-	if err := utils.PostJSON(ctx, "https://api.openai.com/v1/responses", payload, &raw, headers); err != nil {
+	var raw struct {
+		Output []struct {
+			Content []struct {
+				Type string `json:"type"`
+				Text string `json:"text"`
+			} `json:"content"`
+		} `json:"output"`
+	}
+
+	if err := utils.PostJSON(
+		ctx,
+		"https://api.openai.com/v1/responses",
+		payload,
+		&raw,
+		headers,
+	); err != nil {
 		return nil, err
 	}
 
-	text := ""
-	if len(raw.Output) > 0 && len(raw.Output[0].Content) > 0 {
-		text = raw.Output[0].Content[0].Text
-	}
-	if text == "" {
-		return nil, fmt.Errorf("empty AI output")
+	// 🔒 Extract ALL text safely
+	var text string
+	for _, out := range raw.Output {
+		for _, c := range out.Content {
+			if c.Text != "" {
+				text += c.Text
+			}
+		}
 	}
 
+	if text == "" {
+		return nil, fmt.Errorf("AI returned empty output")
+	}
+
+	// 🔒 Parse JSON
 	var obj map[string]any
 	if err := json.Unmarshal([]byte(text), &obj); err != nil {
-		return nil, fmt.Errorf("AI returned non-JSON: %w", err)
+		return nil, fmt.Errorf("AI returned invalid JSON: %w\nRAW:\n%s", err, text)
 	}
+
 	return obj, nil
 }
 
