@@ -42,3 +42,9 @@ services:
     depends_on:
       - web
       - api
+  certbot:
+    image: certbot/certbot:latest
+    container_name: trip-certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
