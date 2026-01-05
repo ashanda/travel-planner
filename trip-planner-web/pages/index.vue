@@ -77,9 +77,9 @@
         <!-- LEFT: itinerary -->
         <div class="lg:col-span-7 space-y-6">
           <WeatherCard
-            v-if="store.plan?.itinerary?.weather"
-            :weather="store.plan.itinerary.weather"
-            :destination="store.plan.request.destination"
+            v-if="store.plan"
+            :weather="store.plan?.weather"
+            :destination="store.plan?.request?.destination"
             />
 
           <SectionCard title="Itinerary" subtitle="Day-by-day plan">
