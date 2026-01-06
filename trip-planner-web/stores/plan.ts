@@ -27,7 +27,11 @@ export const usePlanStore = defineStore('plan', {
       try {
         this.plan = await post<TripPlan>('/v1/trip/plan', payload)
       } catch (e: any) {
-        this.error = e?.data?.error || e?.message || 'Failed'
+        if (e?.data?.error === 'limit_reached') {
+          this.error = 'LIMIT_REACHED'
+        } else {
+          this.error = e?.data?.error || e?.message || 'Failed'
+        }
       } finally {
         this.loading = false
       }
@@ -42,7 +46,11 @@ export const usePlanStore = defineStore('plan', {
       try {
         this.plan = await post<TripPlan>('/v1/trip/plan/regenerate', payload)
       } catch (e: any) {
-        this.error = e?.data?.error || e?.message || 'Failed'
+        if (e?.data?.error === 'limit_reached') {
+          this.error = 'LIMIT_REACHED'
+        } else {
+          this.error = e?.data?.error || e?.message || 'Failed'
+        }
       } finally {
         this.loading = false
       }

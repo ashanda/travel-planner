@@ -154,7 +154,18 @@
                 Planning…
               </div>
 
-              <div v-else-if="store.error" class="rounded-2xl border bg-white p-4 text-sm text-red-600">
+              <!-- ✅ LIMIT REACHED UI -->
+              <LimitReachedCard
+                v-if="store.error === 'LIMIT_REACHED'"
+                @upgrade="goUpgrade"
+                @close="store.error = ''"
+              />
+
+              <!-- Other errors -->
+              <div
+                v-else-if="store.error"
+                class="rounded-2xl border bg-white p-4 text-sm text-red-600"
+              >
                 {{ store.error }}
               </div>
 
@@ -221,10 +232,21 @@
       </div>
 
       <div class="mt-10 border-t pt-6 text-center text-xs text-slate-500">
-        © {{ new Date().getFullYear() }} Travel Planner — All rights reserved.
-      </div>
-    </SectionShell>
-  </section>
+          © {{ new Date().getFullYear() }} Travel Planner — All rights reserved.
+        </div>
+      </SectionShell>
+    </section>
+    <div
+    v-if="store.error === 'LIMIT_REACHED'"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4"
+  >
+    <div class="w-full max-w-lg">
+      <LimitReachedCard
+        @upgrade="goUpgrade"
+        @close="store.error = ''"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -232,7 +254,7 @@ import { onMounted } from 'vue'
 import { usePlanStore } from '@/stores/plan'
 import { useAuthStore } from '@/stores/auth'
 import type { TripRequest } from '@/types/trip'
-
+import LimitReachedCard from '@/components/LimitReachedCard.vue'
 import TripForm from '@/components/TripForm.vue'
 import PlanSummaryCard from '@/components/PlanSummaryCard.vue'
 import ItineraryView from '@/components/ItineraryView.vue'
@@ -269,7 +291,9 @@ const loadById = async (id: string) => {
   if (!id) return
   await store.loadPlan(id)
 }
-
+const goUpgrade = () => {
+  navigateTo('/pricing') // or /plan/pricing etc
+}
 const gallery = [
   'https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=1200&q=70',
   'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=70',
