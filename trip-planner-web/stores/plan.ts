@@ -2,12 +2,6 @@ import { defineStore } from 'pinia'
 import type { TripPlan, TripRequest } from '@/types/trip'
 import { useAuthStore } from '@/stores/auth'
 
-const auth = useAuthStore()
-
-if (!auth.user) {
-  throw new Error('Login required')
-}
-
 export const usePlanStore = defineStore('plan', {
   state: () => ({
     loading: false,
@@ -16,8 +10,18 @@ export const usePlanStore = defineStore('plan', {
   }),
 
   actions: {
+    requireAuth() {
+      const auth = useAuthStore()
+      if (!auth.user) {
+        throw new Error('Login required')
+      }
+      return auth
+    },
+
     async generate(payload: TripRequest) {
+      this.requireAuth()
       const { post } = useApi()
+
       this.loading = true
       this.error = ''
       try {
@@ -30,7 +34,9 @@ export const usePlanStore = defineStore('plan', {
     },
 
     async regenerate(payload: TripRequest) {
+      this.requireAuth()
       const { post } = useApi()
+
       this.loading = true
       this.error = ''
       try {
@@ -43,7 +49,9 @@ export const usePlanStore = defineStore('plan', {
     },
 
     async loadPlan(id: string) {
+      this.requireAuth()
       const { get } = useApi()
+
       this.loading = true
       this.error = ''
       try {
