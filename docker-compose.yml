@@ -31,6 +31,7 @@ services:
     environment:
       NODE_ENV: "production"
       NUXT_PUBLIC_API_BASE: ${NUXT_PUBLIC_API_BASE}
+      NUXT_PUBLIC_GOOGLE_CLIENT_ID: ${NUXT_PUBLIC_GOOGLE_CLIENT_ID}
     expose:
       - "3000"
     depends_on:
