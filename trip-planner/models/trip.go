@@ -12,6 +12,7 @@ type TripRequest struct {
 
 type TripPlan struct {
 	ID        string      `json:"id"`
+	UserID    string      `json:"user_id"`
 	InputHash string      `json:"input_hash"`
 	Request   TripRequest `json:"request"`
 

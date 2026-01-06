@@ -1,5 +1,12 @@
 import { defineStore } from 'pinia'
 import type { TripPlan, TripRequest } from '@/types/trip'
+import { useAuthStore } from '@/stores/auth'
+
+const auth = useAuthStore()
+
+if (!auth.user) {
+  throw new Error('Login required')
+}
 
 export const usePlanStore = defineStore('plan', {
   state: () => ({

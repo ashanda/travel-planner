@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.23-alpine AS builder
+FROM docker.io/golang:1.24-alpine AS builder
 
 WORKDIR /src
 RUN apk add --no-cache git ca-certificates
@@ -12,7 +12,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /out/api .
 
 FROM alpine:3.20
 WORKDIR /app
-RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache ca-certificates sqlite-libs
 
 COPY --from=builder /out/api /app/api
 RUN mkdir -p /app/storage

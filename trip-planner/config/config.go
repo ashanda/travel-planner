@@ -1,60 +1,90 @@
 package config
 
 import (
+	"log"
 	"os"
 	"strconv"
 )
 
 type Config struct {
-	Port string
+	// Server
+	AppPort string
 
+	// AI
 	OpenAIKey   string
 	OpenAIModel string
 
-	GoogleMapsKey  string
+	// Google Places
+	GoogleMapsKey string
+
+	// Weather
 	OpenWeatherKey string
 
+	// Storage
 	PlansFile string
+	DBPath    string
 
+	// Cache
 	PlacesCacheHours  int
 	WeatherCacheHours int
+
+	// Auth
+	GoogleClientID string
+	JWTSecret      string
+
+	// Limits
+	FreeLimit int
 }
 
 func Load() Config {
 	return Config{
-		Port: getenv("APP_PORT", "8080"),
+		AppPort: getEnv("APP_PORT", "8080"),
 
-		OpenAIKey:   mustGet("OPENAI_API_KEY"),
-		OpenAIModel: getenv("OPENAI_MODEL", "gpt-5.2"),
+		OpenAIKey:   mustEnv("OPENAI_API_KEY"),
+		OpenAIModel: getEnv("OPENAI_MODEL", "gpt-5.2"),
 
-		GoogleMapsKey:  mustGet("GOOGLE_MAPS_API_KEY"),
-		OpenWeatherKey: getenv("OPENWEATHER_API_KEY", ""),
+		GoogleMapsKey:  mustEnv("GOOGLE_MAPS_API_KEY"),
+		OpenWeatherKey: getEnv("OPENWEATHER_API_KEY", ""),
 
-		PlansFile: getenv("PLANS_FILE", "storage/plans.json"),
+		PlansFile: getEnv("PLANS_FILE", "/app/storage/plans.json"),
+		DBPath:    getEnv("DB_PATH", "/app/storage/app.db"),
 
-		PlacesCacheHours:  atoi(getenv("PLACES_CACHE_HOURS", "168")),
-		WeatherCacheHours: atoi(getenv("WEATHER_CACHE_HOURS", "2")),
+		PlacesCacheHours:  getEnvInt("PLACES_CACHE_HOURS", 168),
+		WeatherCacheHours: getEnvInt("WEATHER_CACHE_HOURS", 2),
+
+		GoogleClientID: mustEnv("GOOGLE_CLIENT_ID"),
+		JWTSecret:      mustEnv("JWT_SECRET"),
+
+		FreeLimit: getEnvInt("FREE_LIMIT", 2),
 	}
 }
 
-func getenv(k, def string) string {
-	v := os.Getenv(k)
+// ---------- helpers ----------
+
+func mustEnv(key string) string {
+	v := os.Getenv(key)
+	if v == "" {
+		log.Fatalf("Missing required env var: %s", key)
+	}
+	return v
+}
+
+func getEnv(key, def string) string {
+	v := os.Getenv(key)
 	if v == "" {
 		return def
 	}
 	return v
 }
-func mustGet(k string) string {
-	v := os.Getenv(k)
+
+func getEnvInt(key string, def int) int {
+	v := os.Getenv(key)
 	if v == "" {
-		panic("Missing env: " + k)
+		return def
 	}
-	return v
-}
-func atoi(s string) int {
-	n, err := strconv.Atoi(s)
+	i, err := strconv.Atoi(v)
 	if err != nil {
-		return 0
+		return def
 	}
-	return n
+	return i
 }

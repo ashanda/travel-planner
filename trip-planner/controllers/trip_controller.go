@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"crypto/sha256"
+	"database/sql"
 	"encoding/hex"
 	"net/http"
 	"time"
@@ -17,6 +18,7 @@ import (
 
 type TripController struct {
 	cfg config.Config
+	db  *sql.DB
 
 	ai      *services.AIService
 	places  *services.PlacesService
@@ -25,9 +27,16 @@ type TripController struct {
 	store *utils.JSONStore[models.TripPlan]
 }
 
-func NewTripController(cfg config.Config, ai *services.AIService, places *services.PlacesService, weather *services.WeatherService) *TripController {
+func NewTripController(
+	cfg config.Config,
+	db *sql.DB,
+	ai *services.AIService,
+	places *services.PlacesService,
+	weather *services.WeatherService,
+) *TripController {
 	return &TripController{
 		cfg:     cfg,
+		db:      db,
 		ai:      ai,
 		places:  places,
 		weather: weather,
@@ -40,17 +49,38 @@ func (t *TripController) Health(c *gin.Context) {
 }
 
 // GET /api/v1/trip/plans
+// Returns ONLY the logged user's plans
 func (t *TripController) ListPlans(c *gin.Context) {
+	uid := c.GetString("uid")
+	if uid == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+		return
+	}
+
 	all, err := t.store.ReadAll()
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "read_failed", "details": err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, all)
+
+	// filter by user
+	out := make([]models.TripPlan, 0, len(all))
+	for _, p := range all {
+		if p.UserID == uid {
+			out = append(out, p)
+		}
+	}
+	c.JSON(http.StatusOK, out)
 }
 
 // GET /api/v1/trip/plan/:id
 func (t *TripController) GetPlan(c *gin.Context) {
+	uid := c.GetString("uid")
+	if uid == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+		return
+	}
+
 	id := c.Param("id")
 
 	all, err := t.store.ReadAll()
@@ -60,7 +90,7 @@ func (t *TripController) GetPlan(c *gin.Context) {
 	}
 
 	for _, p := range all {
-		if p.ID == id {
+		if p.ID == id && p.UserID == uid {
 			c.JSON(http.StatusOK, p)
 			return
 		}
@@ -69,8 +99,16 @@ func (t *TripController) GetPlan(c *gin.Context) {
 }
 
 // POST /api/v1/trip/plan
-// Cost control: if same request hash exists => return saved plan (NO AI)
+// Cost control:
+// - Same request hash => return saved plan (NO AI call)
+// - Otherwise: check quota then generate AI once and save
 func (t *TripController) CreatePlan(c *gin.Context) {
+	uid := c.GetString("uid")
+	if uid == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+		return
+	}
+
 	var req models.TripRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_request", "details": err.Error()})
@@ -93,54 +131,53 @@ func (t *TripController) CreatePlan(c *gin.Context) {
 		return
 	}
 
-	// ✅ Return existing plan for same hash (NO AI call)
+	// ✅ If same hash for same user => return saved plan (NO AI)
 	for _, p := range all {
-		if p.InputHash == hash {
+		if p.UserID == uid && p.InputHash == hash {
 			c.JSON(http.StatusOK, p)
 			return
 		}
 	}
 
-	// -------------------------
-	// Places (RAW -> SLIM)
-	// -------------------------
-	placesRaw, err := t.places.GetPlacesByCity(c.Request.Context(), req.Destination)
+	// ✅ Enforce quota only when we REALLY need AI
+	if err := t.ensureFreeQuota(c, uid); err != nil {
+		// ensureFreeQuota already wrote response
+		return
+	}
+
+	// Places (cached by city)
+	places, err := t.places.GetPlacesByCity(c.Request.Context(), req.Destination)
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"error": "places_failed", "details": err.Error()})
 		return
 	}
-	placesSlim := services.SlimPlaces(placesRaw, 12)
 
-	// -------------------------
-	// Weather (RAW -> SLIM)
-	// -------------------------
-	weatherRaw, err := t.weather.GetCityWeather(c.Request.Context(), req.Destination)
+	// Weather (cached)
+	weather, err := t.weather.GetCityWeather(c.Request.Context(), req.Destination)
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"error": "weather_failed", "details": err.Error()})
 		return
 	}
-	weatherSlim := services.SlimWeather(weatherRaw)
 
-	// -------------------------
 	// AI (only once)
-	// -------------------------
-	itinerary, err := t.ai.GenerateTrip(c.Request.Context(), req, placesSlim, weatherSlim)
+	itinerary, err := t.ai.GenerateTrip(c.Request.Context(), req, places, weather)
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"error": "ai_failed", "details": err.Error()})
 		return
 	}
 
+	// ✅ Attach contexts so frontend can show WeatherCard etc.
+	// itinerary is map[string]any (recommended). If your AI returns map, great.
+	itinerary["weather"] = weather
+	itinerary["places"] = places
+
 	now := time.Now().Unix()
 	plan := models.TripPlan{
 		ID:        uuid.NewString(),
+		UserID:    uid,
 		InputHash: hash,
 		Request:   req,
 		Itinerary: itinerary,
-
-		// ✅ Save for frontend view + debugging
-		Weather: weatherSlim,
-		Places:  placesSlim,
-
 		CreatedAt: now,
 		UpdatedAt: now,
 	}
@@ -151,12 +188,21 @@ func (t *TripController) CreatePlan(c *gin.Context) {
 		return
 	}
 
+	// ✅ count usage only after successful save
+	_ = t.incrementUsage(uid)
+
 	c.JSON(http.StatusOK, plan)
 }
 
 // POST /api/v1/trip/plan/regenerate
 // Only called when user edits / forces regenerate
 func (t *TripController) Regenerate(c *gin.Context) {
+	uid := c.GetString("uid")
+	if uid == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "unauthorized"})
+		return
+	}
+
 	var req models.TripRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid_request", "details": err.Error()})
@@ -178,44 +224,45 @@ func (t *TripController) Regenerate(c *gin.Context) {
 		return
 	}
 
-	// Places RAW -> SLIM
-	placesRaw, err := t.places.GetPlacesByCity(c.Request.Context(), req.Destination)
+	// ✅ Enforce quota (regen also consumes a generation)
+	if err := t.ensureFreeQuota(c, uid); err != nil {
+		return
+	}
+
+	places, err := t.places.GetPlacesByCity(c.Request.Context(), req.Destination)
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"error": "places_failed", "details": err.Error()})
 		return
 	}
-	placesSlim := services.SlimPlaces(placesRaw, 12)
 
-	// Weather RAW -> SLIM
-	weatherRaw, err := t.weather.GetCityWeather(c.Request.Context(), req.Destination)
+	weather, err := t.weather.GetCityWeather(c.Request.Context(), req.Destination)
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"error": "weather_failed", "details": err.Error()})
 		return
 	}
-	weatherSlim := services.SlimWeather(weatherRaw)
 
-	// Force AI call
-	itinerary, err := t.ai.GenerateTrip(c.Request.Context(), req, placesSlim, weatherSlim)
+	itinerary, err := t.ai.GenerateTrip(c.Request.Context(), req, places, weather)
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"error": "ai_failed", "details": err.Error()})
 		return
 	}
 
+	itinerary["weather"] = weather
+	itinerary["places"] = places
+
 	now := time.Now().Unix()
 
-	// If hash exists, update it
+	// If hash exists for same user, update it
 	for i := range all {
-		if all[i].InputHash == hash {
+		if all[i].UserID == uid && all[i].InputHash == hash {
 			all[i].Request = req
 			all[i].Itinerary = itinerary
-			all[i].Weather = weatherSlim
-			all[i].Places = placesSlim
 			all[i].UpdatedAt = now
-
 			if err := t.store.WriteAll(all); err != nil {
 				c.JSON(http.StatusInternalServerError, gin.H{"error": "save_failed", "details": err.Error()})
 				return
 			}
+			_ = t.incrementUsage(uid)
 			c.JSON(http.StatusOK, all[i])
 			return
 		}
@@ -224,11 +271,10 @@ func (t *TripController) Regenerate(c *gin.Context) {
 	// Otherwise create new
 	plan := models.TripPlan{
 		ID:        uuid.NewString(),
+		UserID:    uid,
 		InputHash: hash,
 		Request:   req,
 		Itinerary: itinerary,
-		Weather:   weatherSlim,
-		Places:    placesSlim,
 		CreatedAt: now,
 		UpdatedAt: now,
 	}
@@ -237,11 +283,57 @@ func (t *TripController) Regenerate(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "save_failed", "details": err.Error()})
 		return
 	}
+	_ = t.incrementUsage(uid)
 
 	c.JSON(http.StatusOK, plan)
 }
 
+func (t *TripController) ensureFreeQuota(c *gin.Context, uid string) error {
+	limit := t.cfg.FreeLimit
+	if limit <= 0 {
+		limit = 2 // default
+	}
+
+	// If DB not configured, allow (but you should configure)
+	if t.db == nil {
+		return nil
+	}
+
+	// Ensure usage row exists
+	now := time.Now().Unix()
+	_, _ = t.db.Exec(`INSERT OR IGNORE INTO usage (user_id, generations, updated_at) VALUES (?, ?, ?)`, uid, 0, now)
+
+	var gens int
+	err := t.db.QueryRow(`SELECT generations FROM usage WHERE user_id = ?`, uid).Scan(&gens)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "usage_read_failed", "details": err.Error()})
+		return err
+	}
+
+	if gens >= limit {
+		c.JSON(http.StatusPaymentRequired, gin.H{
+			"error":   "limit_reached",
+			"details": "Free limit reached. Please upgrade to generate more itineraries.",
+			"limit":   limit,
+			"used":    gens,
+		})
+		return sql.ErrNoRows // any non-nil to stop flow
+	}
+
+	return nil
+}
+
+func (t *TripController) incrementUsage(uid string) error {
+	if t.db == nil {
+		return nil
+	}
+	now := time.Now().Unix()
+	_, err := t.db.Exec(`UPDATE usage SET generations = generations + 1, updated_at = ? WHERE user_id = ?`, now, uid)
+	return err
+}
+
 func hashTripRequest(req models.TripRequest) string {
+	// stable hash: serialize important fields
 	data := req.Destination + "|" + req.StartDate + "|" + itoa(req.Days) + "|" + req.Budget + "|" + req.Pace + "|" + join(req.Interests) + "|" + req.Notes
 	sum := sha256.Sum256([]byte(data))
 	return hex.EncodeToString(sum[:])

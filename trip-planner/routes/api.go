@@ -1,27 +1,66 @@
 package routes
 
 import (
+	"database/sql"
+	"net/http"
+
 	"github.com/gin-gonic/gin"
+
 	"trip-planner/config"
 	"trip-planner/controllers"
+	"trip-planner/middleware"
 	"trip-planner/services"
 )
 
-func RegisterRoutes(r *gin.Engine, cfg config.Config) {
-	placesSvc := services.NewPlacesService(cfg.GoogleMapsKey, cfg.PlacesCacheHours)
-	weatherSvc := services.NewWeatherService(cfg.OpenWeatherKey, cfg.WeatherCacheHours)
-	aiSvc := services.NewAIService(cfg.OpenAIKey, cfg.OpenAIModel)
+func RegisterRoutes(
+	r *gin.Engine,
+	cfg config.Config,
+	db *sql.DB,
+	ai *services.AIService,
+	places *services.PlacesService,
+	weather *services.WeatherService,
+	authSvc *services.AuthService,
+) {
+	// -------- Base middleware (recommended) --------
+	r.Use(gin.Recovery())
 
-	tripCtrl := controllers.NewTripController(cfg, aiSvc, placesSvc, weatherSvc)
+	// If you are behind reverse proxy (nginx), set trusted proxies properly
+	// For now, disable trusting all proxies:
+	_ = r.SetTrustedProxies(nil)
 
-	v1 := r.Group("/api/v1")
-	{
-		v1.GET("/health", tripCtrl.Health)
+	// -------- Versioned API group --------
+	api := r.Group("/api")
+	v1 := api.Group("/v1")
 
-		// MVP (cost-controlled)
-		v1.POST("/trip/plan", tripCtrl.CreatePlan)              // generate if not exists
-		v1.POST("/trip/plan/regenerate", tripCtrl.Regenerate)   // only if user edits / forces
-		v1.GET("/trip/plan/:id", tripCtrl.GetPlan)              // fetch saved plan
-		v1.GET("/trip/plans", tripCtrl.ListPlans)               // list all saved plans
-	}
+	// -------- Health --------
+	v1.GET("/health", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"ok": true})
+	})
+
+	// -------- Controllers --------
+	authCtrl := controllers.NewAuthController(db, authSvc, cfg.JWTSecret)
+	tripCtrl := controllers.NewTripController(cfg, db, ai, places, weather)
+
+	// -------- Auth routes --------
+	// Frontend sends Google "id_token"
+	v1.POST("/auth/google", authCtrl.GoogleLogin)
+
+	// Logged-in session info
+	v1.GET("/auth/me", middleware.RequireAuth(cfg.JWTSecret), authCtrl.Me)
+
+	// Logout clears cookie
+	v1.POST("/auth/logout", middleware.RequireAuth(cfg.JWTSecret), authCtrl.Logout)
+
+	// -------- Protected Trip routes --------
+	trip := v1.Group("/trip")
+	trip.Use(middleware.RequireAuth(cfg.JWTSecret))
+
+	trip.GET("/plans", tripCtrl.ListPlans)
+	trip.GET("/plan/:id", tripCtrl.GetPlan)
+
+	// Generate plan (2-free limit enforced inside controller)
+	trip.POST("/plan", tripCtrl.CreatePlan)
+
+	// Force regenerate (consumes generation)
+	trip.POST("/plan/regenerate", tripCtrl.Regenerate)
 }
