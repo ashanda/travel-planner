@@ -3,7 +3,7 @@
     type="button"
     @click="signIn"
     :disabled="auth.loading || !ready"
-    class="w-full rounded-2xl bg-white text-slate-900 font-semibold py-3 shadow hover:-translate-y-0.5 transition flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
+    class="w-full rounded-2xl bg-white text-slate-900 font-semibold py-3 shadow hover:-translate-y-0.5 transition flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed pl-4 pr-4"
   >
     <img src="/google.svg" class="h-5 w-5" alt="google" />
     {{ ready ? 'Continue with Google' : 'Loading Google…' }}
