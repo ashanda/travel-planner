@@ -8,6 +8,10 @@
     <img src="/google.svg" class="h-5 w-5" alt="google" />
     {{ ready ? 'Continue with Google' : 'Loading Google…' }}
   </button>
+
+  <p v-if="error" class="mt-3 text-sm text-red-600">
+    {{ error }}
+  </p>
 </template>
 
 <script setup lang="ts">
@@ -16,7 +20,9 @@ import { useAuthStore } from '@/stores/auth'
 
 const auth = useAuthStore()
 const cfg = useRuntimeConfig()
+
 const ready = ref(false)
+const error = ref('')
 
 declare global {
   interface Window {
@@ -24,31 +30,62 @@ declare global {
   }
 }
 
+const initGSI = () => {
+  const gsi = window.google?.accounts?.id
+  const clientId = cfg.public.googleClientId
+
+  if (!gsi) return false
+  if (!clientId) {
+    error.value = 'Missing Google Client ID (NUXT_PUBLIC_GOOGLE_CLIENT_ID).'
+    console.error('Missing cfg.public.googleClientId')
+    return false
+  }
+
+  // ✅ initialize once
+  gsi.initialize({
+    client_id: clientId,
+    callback: async (response: any) => {
+      error.value = ''
+      try {
+        const idToken = response?.credential
+        if (!idToken) {
+          error.value = 'Google did not return a credential token.'
+          console.error('No credential', response)
+          return
+        }
+
+        await auth.loginWithGoogle(idToken)
+        await auth.fetchMe()
+      } catch (e: any) {
+        // Show useful error from API if available
+        error.value =
+          e?.data?.details ||
+          e?.data?.error ||
+          e?.message ||
+          'Google login failed'
+        console.error('Login error', e)
+      }
+    }
+  })
+
+  ready.value = true
+  return true
+}
+
 onMounted(() => {
-  // ✅ only in browser
   if (!import.meta.client) return
 
-  const check = () => {
-    if (window.google?.accounts?.id) {
-      ready.value = true
-      return
-    }
-    setTimeout(check, 150)
+  const wait = () => {
+    if (initGSI()) return
+    setTimeout(wait, 150)
   }
-  check()
+  wait()
 })
 
 const signIn = () => {
   if (!import.meta.client) return
-  if (!window.google?.accounts?.id) return
-
-  window.google.accounts.id.initialize({
-    client_id: cfg.public.googleClientId,
-    callback: async (response: any) => {
-      await auth.loginWithGoogle(response.credential)
-    }
-  })
-
-  window.google.accounts.id.prompt()
+  const gsi = window.google?.accounts?.id
+  if (!gsi || !ready.value) return
+  gsi.prompt()
 }
 </script>
