@@ -15,7 +15,9 @@
         Sign in with Google to generate your trip plan.
       </div>
 
-      <GoogleLoginButton />
+      <ClientOnly>
+        <GoogleLoginButton />
+    </ClientOnly>
     </div>
   </div>
 </template>

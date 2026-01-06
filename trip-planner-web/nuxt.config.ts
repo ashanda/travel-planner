@@ -5,11 +5,18 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
 
+  app: {
+    head: {
+      script: [
+        { src: 'https://accounts.google.com/gsi/client', async: true, defer: true }
+      ]
+    }
+  },
+
   runtimeConfig: {
     public: {
-      // Docker+Nginx => "/api"
-      // Local without Nginx => "http://localhost:8080"
-      apiBase: '/api',
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || '/api',
+      googleClientId: process.env.NUXT_PUBLIC_GOOGLE_CLIENT_ID || ''
     },
   },
 
