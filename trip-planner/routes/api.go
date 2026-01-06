@@ -38,7 +38,8 @@ func RegisterRoutes(
 	})
 
 	// -------- Controllers --------
-	authCtrl := controllers.NewAuthController(db, authSvc, cfg.JWTSecret)
+	authCtrl := controllers.NewAuthController(db, authSvc, cfg.JWTSecret, cfg.CookieDomain)
+
 	tripCtrl := controllers.NewTripController(cfg, db, ai, places, weather)
 
 	// -------- Auth routes --------

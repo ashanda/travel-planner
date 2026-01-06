@@ -19,6 +19,7 @@ services:
       GOOGLE_CALLBACK_URL: ${GOOGLE_CALLBACK_URL}
       JWT_SECRET: ${JWT_SECRET}
       FREE_LIMIT: ${FREE_LIMIT}
+      COOKIE_DOMAIN: ${COOKIE_DOMAIN}
     volumes:
       - ./trip-planner/storage:/app/storage
     expose:

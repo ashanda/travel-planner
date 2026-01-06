@@ -32,6 +32,8 @@ type Config struct {
 	GoogleClientID string
 	JWTSecret      string
 
+	CookieDomain   string
+
 	// Limits
 	FreeLimit int
 }
@@ -54,6 +56,8 @@ func Load() Config {
 
 		GoogleClientID: mustEnv("GOOGLE_CLIENT_ID"),
 		JWTSecret:      mustEnv("JWT_SECRET"),
+
+		CookieDomain: getEnv("COOKIE_DOMAIN", "localhost"),
 
 		FreeLimit: getEnvInt("FREE_LIMIT", 2),
 	}
