@@ -134,6 +134,11 @@
     </section>
   </main>
 </template>
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+}
+</style>
 
 <script setup lang="ts">
 import AppHeader from '@/components/AppHeader.vue'

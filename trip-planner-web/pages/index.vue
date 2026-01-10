@@ -39,9 +39,7 @@
       </div>
 
       <div class="py-10 sm:py-14 lg:py-16">
-        <div
-          class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur"
-        >
+        <div class="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur">
           <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
           Sri Lanka • AI Trip Planner
         </div>
@@ -183,26 +181,7 @@
     </SectionShell>
   </section>
 
-  <!-- GALLERY -->
-  <section class="bg-slate-50">
-    <SectionShell>
-      <div class="text-center">
-        <div class="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-700 border">
-          Our Gallery
-        </div>
-        <h2 class="mt-4 text-2xl font-extrabold tracking-tight text-slate-900">
-          Beautiful moments across Sri Lanka
-        </h2>
-        <p class="mx-auto mt-2 max-w-2xl text-sm text-slate-600">
-          Replace these images with your own. This is a premium landing layout.
-        </p>
-      </div>
 
-      <div class="mt-8">
-        <GalleryGrid :images="gallery" />
-      </div>
-    </SectionShell>
-  </section>
 
   <!-- CONTACT -->
   <section class="bg-white">
@@ -221,9 +200,32 @@
         </div>
 
         <div class="flex items-center gap-3 text-slate-500">
-          <a href="#" class="rounded-2xl border bg-white px-3 py-2 text-xs font-semibold hover:text-slate-900">f</a>
-          <a href="#" class="rounded-2xl border bg-white px-3 py-2 text-xs font-semibold hover:text-slate-900">ig</a>
-          <a href="#" class="rounded-2xl border bg-white px-3 py-2 text-xs font-semibold hover:text-slate-900">in</a>
+          <!-- Facebook -->
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="flex h-10 w-10 items-center justify-center rounded-2xl border bg-white hover:text-blue-600 transition"
+          >
+            <i class="fa-brands fa-facebook-f text-lg"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="flex h-10 w-10 items-center justify-center rounded-2xl border bg-white hover:text-pink-600 transition"
+          >
+            <i class="fa-brands fa-instagram text-lg"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            class="flex h-10 w-10 items-center justify-center rounded-2xl border bg-white hover:text-blue-700 transition"
+          >
+            <i class="fa-brands fa-linkedin-in text-lg"></i>
+          </a>
         </div>
       </div>
 
@@ -248,6 +250,11 @@
     </div>
   </div>
 </template>
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+}
+</style>
 
 <script setup lang="ts">
 import { onMounted } from 'vue'

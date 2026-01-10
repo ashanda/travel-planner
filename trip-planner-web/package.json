@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.7",
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@pinia/nuxt": "^0.11.3",
     "nuxt": "^4.2.2",
     "pinia": "^3.0.4",

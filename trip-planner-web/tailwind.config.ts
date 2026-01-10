@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 export default {
   content: [
     "./app.vue",
@@ -7,6 +9,12 @@ export default {
     "./layouts/**/*.{vue,js,ts}",
     "./plugins/**/*.{js,ts}",
   ],
-  theme: { extend: {} },
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
   plugins: [],
 }

@@ -5,6 +5,11 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
 
+  css: [
+    '@/assets/css/main.css',
+    '@fortawesome/fontawesome-free/css/all.min.css'
+  ],
+
   app: {
     head: {
       script: [
