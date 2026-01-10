@@ -1,6 +1,6 @@
 <template>
   <!-- HERO -->
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden min-h-[75vh]">
     <!-- Background image -->
     <NuxtImg
       src="/hero.jpg"
