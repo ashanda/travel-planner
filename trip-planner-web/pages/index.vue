@@ -1,16 +1,8 @@
 <template>
   <!-- HERO -->
-  <section class="relative overflow-hidden min-h-[70vh] sm:min-h-[75vh] lg:min-h-[80vh]">
+  <section class="relative overflow-hidden">
     <!-- Background image -->
-    <NuxtImg
-      src="/hero.jpg"
-      alt="Sri Lanka Trip Planner"
-      sizes="100vw"
-      width="1920"
-      height="900"
-      preload
-      class="absolute inset-0 h-full w-full object-cover"
-    />
+    <img src="/hero.jpg" alt="hero" class="absolute inset-0 h-full w-full object-cover" />
     <div class="absolute inset-0 bg-slate-950/55"></div>
 
     <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
