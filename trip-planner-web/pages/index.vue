@@ -1,6 +1,6 @@
 <template>
   <!-- HERO -->
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden min-h-[75vh] flex items-center">
     <!-- Background image -->
     <img src="/hero.jpg" alt="hero" class="absolute inset-0 h-full w-full object-cover" />
     <div class="absolute inset-0 bg-slate-950/55"></div>
