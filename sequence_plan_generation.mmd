@@ -1,0 +1,17 @@
+sequenceDiagram
+  autonumber
+  actor User
+  participant UI as Frontend (trip-planner-web)
+  participant API as Backend API (trip-planner)
+  participant DB as Database
+  participant EXT as External APIs
+
+  User->>UI: Enter trip preferences
+  UI->>API: POST /api/plans (preferences)
+  API->>API: Validate session/JWT
+  API->>EXT: Fetch places/weather/AI (optional)
+  EXT-->>API: Results / suggestions
+  API->>DB: Save generated plan
+  DB-->>API: Plan ID
+  API-->>UI: 200 OK (plan JSON)
+  UI-->>User: Render itinerary

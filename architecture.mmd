@@ -1,0 +1,6 @@
+flowchart LR
+  U[User Browser] -->|HTTPS| N[Nginx Reverse Proxy]
+  N -->|/ (UI)| W[Frontend: trip-planner-web]
+  N -->|/api (JSON)| A[Backend API: trip-planner (Go)]
+  A -->|Read/Write| DB[(Database)]
+  A -->|Optional| EXT[(External APIs: Maps/AI/Weather)]

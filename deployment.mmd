@@ -1,0 +1,14 @@
+flowchart TB
+  subgraph Host[Server / VPS]
+    direction TB
+    DC[Docker Compose]
+    DC --> N[Nginx Container]
+    DC --> W[Frontend Container]
+    DC --> A[API Container]
+    DC --> V[(Volumes: db/storage)]
+  end
+
+  Internet --> N
+  N --> W
+  N --> A
+  A --> V
